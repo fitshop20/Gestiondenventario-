@@ -2,272 +2,221 @@
 
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ESCÁNER DE INVENTARIO</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>FitShop - Escáner de Inventario</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "inverse-on-surface": "#313030",
-              "surface-dim": "#131313",
-              "on-tertiary-container": "#7cb0c0",
-              "on-primary-fixed": "#40000b",
-              "secondary-fixed-dim": "#ffb3b5",
-              "on-primary": "#680018",
-              "outline": "#a78a8a",
-              "error-container": "#93000a",
-              "surface-tint": "#ffb3b5",
-              "surface-bright": "#3a3939",
-              "surface-container-highest": "#353534",
-              "on-tertiary-fixed": "#001f26",
-              "on-secondary-fixed": "#3b070e",
-              "primary-fixed-dim": "#ffb3b5",
-              "on-tertiary": "#003640",
-              "inverse-surface": "#e5e2e1",
-              "surface-container-high": "#2a2a2a",
-              "on-background": "#e5e2e1",
-              "tertiary-fixed": "#b6ebfb",
-              "background": "#131313",
-              "on-secondary": "#571c22",
-              "error": "#ffb4ab",
-              "on-tertiary-fixed-variant": "#114d5b",
-              "on-error": "#690005",
-              "secondary-container": "#743237",
-              "on-surface-variant": "#e0bfbf",
-              "outline-variant": "#584141",
-              "on-primary-fixed-variant": "#8e0f28",
-              "primary-container": "#800020",
-              "surface-container-low": "#1c1b1b",
-              "tertiary-container": "#004451",
-              "secondary": "#ffb3b5",
-              "on-primary-container": "#ff828a",
-              "on-surface": "#e5e2e1",
-              "primary": "#ffb3b5",
-              "on-secondary-fixed-variant": "#743237",
-              "surface": "#131313",
-              "inverse-primary": "#af2b3e",
-              "surface-container-lowest": "#0e0e0e",
-              "on-secondary-container": "#f69da0",
-              "tertiary-fixed-dim": "#9acfde",
-              "surface-container": "#201f1f",
-              "surface-variant": "#353534",
-              "on-error-container": "#ffdad6",
-              "primary-fixed": "#ffdada",
-              "tertiary": "#9acfde",
-              "secondary-fixed": "#ffdada"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .scanner-overlay {
+            background: linear-gradient(0deg, rgba(19,19,19,0.9) 0%, rgba(19,19,19,0) 50%, rgba(19,19,19,0.9) 100%);
+        }
+        .scan-region {
+            box-shadow: 0 0 0 4000px rgba(19, 19, 19, 0.6);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .scanning-line {
-            animation: scan 3s ease-in-out infinite;
-        }
-        @keyframes scan {
-            0%, 100% { top: 10%; }
-            50% { top: 90%; }
-        }
-        .grid-bg {
-            background-image: linear-gradient(to right, rgba(88, 65, 65, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(88, 65, 65, 0.05) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
     </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed-variant": "#6d3733",
+                "outline": "#ab8985",
+                "tertiary-fixed-dim": "#7bd1f8",
+                "secondary-fixed": "#ffdad6",
+                "on-surface-variant": "#e4beba",
+                "surface-container-low": "#1c1b1b",
+                "on-primary-fixed": "#370d0b",
+                "secondary-fixed-dim": "#ffb3ac",
+                "primary-fixed-dim": "#ffb3ac",
+                "on-error-container": "#ffdad6",
+                "surface-variant": "#353534",
+                "tertiary-fixed": "#bee9ff",
+                "on-secondary-fixed-variant": "#930010",
+                "surface-container-high": "#2a2a2a",
+                "primary-fixed": "#ffdad6",
+                "on-tertiary-fixed-variant": "#004d65",
+                "tertiary": "#7bd1f8",
+                "on-secondary-fixed": "#410003",
+                "inverse-primary": "#894e49",
+                "background": "#131313",
+                "on-error": "#690005",
+                "primary": "#ffb3ac",
+                "error-container": "#93000a",
+                "tertiary-container": "#00799c",
+                "inverse-surface": "#e5e2e1",
+                "primary-container": "#9d5f5a",
+                "on-primary-container": "#fff2f0",
+                "surface-container": "#201f1f",
+                "secondary-container": "#a40213",
+                "on-primary": "#51221e",
+                "error": "#ffb4ab",
+                "surface-container-lowest": "#0e0e0e",
+                "on-secondary": "#680008",
+                "secondary": "#ffb3ac",
+                "surface": "#131313",
+                "outline-variant": "#5b403d",
+                "on-tertiary-container": "#e9f7ff",
+                "on-tertiary": "#003546",
+                "inverse-on-surface": "#313030",
+                "surface-container-highest": "#353534",
+                "surface-bright": "#393939",
+                "on-tertiary-fixed": "#001f2a",
+                "on-background": "#e5e2e1",
+                "on-surface": "#e5e2e1",
+                "surface-tint": "#ffb3ac",
+                "surface-dim": "#131313",
+                "on-secondary-container": "#ffaea6"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-</head>
-<body class="bg-background text-on-surface font-body grid-bg min-h-screen pb-24">
-<!-- TopAppBar -->
-<header class="bg-[#131313] fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full max-w-none">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#ffb3b5]" data-icon="qr_code_scanner">qr_code_scanner</span>
-<h1 class="text-lg font-black text-[#e5e2e1] tracking-widest font-headline uppercase">ESCÁNER DE INVENTARIO</h1>
-</div>
-<button class="text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors p-2 active:scale-95 duration-100">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313]/70 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-[#ffb3ac] font-['Space_Grotesk']">
+                FitShop
+            </div>
+<div class="flex gap-4">
+<button class="text-[#e5e2e1]/60 hover:text-[#ffb3ac] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
 </button>
+<button class="text-[#e5e2e1]/60 hover:text-[#ffb3ac] transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
 </header>
-<!-- NavigationDrawer (Desktop) -->
-<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 bg-[#131313] h-full w-72 border-r border-[#3a3939]/15">
-<div class="p-8 mt-16">
-<div class="flex flex-col items-start gap-4">
-<div class="w-16 h-16 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant/20">
-<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Primer plano de un operador técnico en iluminación industrial de clave baja con un auricular oscuro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNYVUmCskluM8Gn7zfV8Pvjm4ZLimdDG6YwYrLULTJQst29pogV67EUXj8uPclfvXLMMbUa63tjVnFpwUu-4W2EvK_DTlSUsxS0a33fHvtauOaa6WUy5Bzq5N15QSENblNt2XwocbplD8knYeLdW0V_iPvcrdG5_nUHwe-8fqWxqa1FtSNyUT2PfiGNlxYXWQ43qcQ4kACWoB3Jfjzg-DSqNSyP3dMVSeZ1sZIXo2BBtDZQxurHOkEIIjU_KZ6Rk0_RLQNjPVchH8U"/>
-</div>
-<div>
-<h3 class="font-headline font-black italic text-[#800020] text-xl tracking-tighter">OPERADOR_082</h3>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Sector 7G - Nivel Auth 4</p>
-<span class="inline-block mt-2 px-2 py-0.5 bg-tertiary-container/20 text-tertiary text-[8px] border border-tertiary/20 uppercase">SESIÓN_ACTIVA</span>
-</div>
-</div>
-</div>
-<nav class="mt-4">
-<a class="flex items-center text-on-surface-variant/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span> Panel de Control
-            </a>
-<a class="flex items-center text-on-surface-variant/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="inventory_2">inventory_2</span> Inventario
-            </a>
-<a class="flex items-center bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="qr_code_scanner">qr_code_scanner</span> Escanear
-            </a>
-<a class="flex items-center text-on-surface-variant/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="settings">settings</span> Configuración
-            </a>
-</nav>
-</aside>
-<!-- Main Content Canvas -->
-<main class="pt-20 px-4 lg:pl-80 max-w-5xl mx-auto space-y-6">
-<!-- Camera Viewfinder Section -->
-<section class="relative aspect-[3/4] md:aspect-video bg-surface-container-lowest overflow-hidden border border-outline-variant/10 group">
+<!-- Main Content: Scanner Canvas -->
+<main class="flex-grow relative pt-16 pb-24 h-screen overflow-hidden">
+<!-- Live Camera Simulation View -->
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-50 contrast-125" data-alt="Punto de vista de una cámara digital enfocando un envase de suplemento deportivo profesional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWl7zgCS6FGLURJTrJeoLM3kkNrKfhjJtDBhTC8Ume5gwaSDOSlmH710-VPHAPV-1ROWCW3Z07QG5e3cFJnXNWVbvZvXbTxl6eUVhzmSQ9opCBUc898ytKOMZKfr7nEC2qg9o7cd-xuc8DlhRPfRrKttMwhUaS9WKrpndH0xyBePYw7ploCxFQs11DV9vI1DpsHHRqIdQYfrfYMXB4MZlO8MF_TjjNz4uDbnruQJ4jt7tSpXphkMODpWY7UEtYMIxPAx1D5s3923i1"/>
+<img class="w-full h-full object-cover brightness-50 contrast-125" data-alt="blurred interior of a modern high-end gym with professional weightlifting equipment and dramatic red accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd6fs_Qyt3s5_wsiyiBxGQNd7X8s5YB0Fu26UBBvWWPJUigKv6jaqUwpkwuRctbCX8fQZnTvxmXtC4y8MNI60cVrp6tho44_W7KiO0W0-Rx8EJpe1tSLRxZhJGfzGnhCUjqLS_LVvQ39J8OZh2E0IJSIthMrzE5CAB6tjOr7ttQoThtZafbqKxLdH3PbnNH0dv8HpzjnzubXLvmdOVWQxLZqnEgis2AemN1vcup3mXZoCjPLPDlC7ueDIUYNMrQfrt0PIuAVmpbDXR"/>
+<!-- Scanner Visual Aids -->
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<div class="scan-region w-72 h-48 border-2 border-primary rounded-lg relative">
+<!-- Corner Brackets -->
+<div class="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-primary rounded-tl-md"></div>
+<div class="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-primary rounded-tr-md"></div>
+<div class="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-primary rounded-bl-md"></div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-primary rounded-br-md"></div>
+<!-- Scanning Laser Animation -->
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary/80 shadow-[0_0_15px_rgba(255,179,172,1)] animate-pulse"></div>
 </div>
-<!-- Tactical Overlays -->
-<div class="absolute inset-0 pointer-events-none border-[20px] border-surface-dim/80"></div>
-<div class="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-primary"></div>
-<div class="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-primary"></div>
-<div class="absolute bottom-8 left-8 w-8 h-8 border-b-2 border-l-2 border-primary"></div>
-<div class="absolute bottom-8 right-8 w-8 h-8 border-b-2 border-r-2 border-primary"></div>
-<!-- Animated Scanning Line -->
-<div class="absolute left-0 w-full h-[2px] bg-error shadow-[0_0_15px_rgba(255,180,171,0.8)] scanning-line z-10"></div>
-<!-- Scanning UI Labels -->
-<div class="absolute top-12 left-1/2 -translate-x-1/2 px-4 py-1 bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/20">
-<p class="text-[10px] font-bold tracking-[0.2em] text-on-surface uppercase font-headline">Reconocimiento Óptico Activo</p>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-<button class="bg-surface-bright/90 backdrop-blur-sm text-on-surface px-6 py-3 rounded-sm flex items-center gap-2 font-headline font-bold text-xs tracking-widest border border-outline-variant/30 hover:bg-surface-variant transition-colors active:scale-95">
-<span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
-                    TOMAR FOTOGRAFÍA
-                </button>
-</div>
-</section>
-<!-- Product Detected Card (Active State) -->
-<section class="bg-surface-container-low p-6 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-<div class="flex items-start justify-between border-b border-outline-variant/10 pb-4">
-<div class="flex items-center gap-4">
-<div class="bg-tertiary-container/30 text-tertiary p-2 rounded-sm border border-tertiary/20">
-<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-</div>
-<div>
-<h2 class="font-headline text-xl font-bold tracking-tight text-on-surface">Producto Detectado</h2>
-<p class="text-[10px] font-mono text-on-surface-variant uppercase tracking-tighter">SKU_AX-9002_WHEY_ISO</p>
+<p class="mt-8 text-primary font-headline font-bold uppercase tracking-widest text-sm bg-background/40 px-4 py-1 rounded-full backdrop-blur-sm">
+                    Alinee el código de barras
+                </p>
 </div>
 </div>
-<div class="text-right">
-<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Stock Actual</p>
-<p class="text-3xl font-headline font-black text-on-surface">142<span class="text-xs font-normal text-on-surface-variant ml-1 uppercase">Unidades</span></p>
+<!-- Detection Slide-up Overlay (Active State Simulation) -->
+<div class="absolute bottom-28 left-4 right-4 z-40">
+<div class="bg-surface-container-low/95 backdrop-blur-xl rounded-xl p-5 border border-outline-variant/20 shadow-2xl">
+<!-- Product Overview Row -->
+<div class="flex gap-4 items-start mb-6">
+<div class="w-24 h-24 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="professional photography of a high-end black container of whey protein powder with metallic red accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0nlAR2ryaxvxqkDOi33SPFNxNXketHypdV22zvWn3TvZVPkhLjzv2mb1RQLhFqQfqh3Lw-xN1_3gpuKr_CgaXCNgcTEhThQwzNCow2TUiC8ePjotz_DsxjZL_eLKBX6Nl7YubMDTaStz9ReChQe3KJ2puazWS-c32DYoXsNwlxQXunIZlbYivlELkBdSk-fqLo28e-Lo_I4cx2us9ly3KW0YVoe6oOisUNeIh2BLnErZoPfMjvUGpuel4ywLHAg3oZFg08S2EprV"/>
 </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Left: Visual & Controls -->
-<div class="space-y-6">
-<div class="flex gap-6 items-center">
-<div class="w-32 h-32 bg-surface-container-high rounded overflow-hidden">
-<img class="w-full h-full object-cover grayscale brightness-75" data-alt="Detalle de un bote de proteína en polvo negro con etiqueta minimalista" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD36QO-7TCuUDLTBjNskoNjNNhorh3u1iz-TxFAbKCxLIj0Wl6tb_9ZsKnipzMvxLpvmvUpYc_wK4-o0XT0p7zLbHsniJwJAI2rzB7ydbidhwYtr9r1nh-mLDKInMzHsxcDoG0bGZJtcU0lniVcXteZ4M6BUfa1CU-CAwdkMglKzvEUmDu7VQNtvz9RHKITctxBRKiafpIMIONfg4zrt5LH6iQI0PxRqv7Ww2zsT8URPKR0EfkNPOfAV67yJLNqVUwLZVn5GSI1WZYi"/>
-</div>
-<div class="flex-1 space-y-4">
-<p class="text-on-surface font-headline font-bold text-lg leading-tight">ISO-WHEY PERFORMANCE MAX (VAINILLA)</p>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">Premium Whey Protein</span>
+<h2 class="text-xl font-headline font-bold text-on-surface mb-1">Impact Whey 2.5kg</h2>
 <div class="flex items-center gap-2">
-<button class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all active:scale-90 border-l-2 border-outline-variant">
-<span class="material-symbols-outlined" data-icon="remove">remove</span>
+<span class="text-xs font-mono text-on-surface-variant">SKU: WHEY-2500-RED</span>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">En Stock</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="bg-surface-container px-4 py-3 rounded-xl">
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold mb-1">Stock Actual</p>
+<p class="text-2xl font-headline font-black text-on-surface">42 <span class="text-xs font-normal text-on-surface-variant">uds</span></p>
+</div>
+<div class="bg-surface-container px-4 py-3 rounded-xl">
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold mb-1">Precio Venta</p>
+<p class="text-2xl font-headline font-black text-primary">$54.90</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex gap-3 mb-6">
+<button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-full flex items-center justify-center gap-2 font-bold transition-transform active:scale-95 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-xl">add_box</span>
+<span class="font-headline tracking-tight">+ ENTRADA</span>
 </button>
-<div class="h-12 flex-1 flex items-center justify-center bg-surface-container-lowest border-y border-outline-variant/10">
-<span class="text-xl font-headline font-black">01</span>
-</div>
-<button class="w-12 h-12 flex items-center justify-center bg-primary-container text-on-primary-container hover:brightness-110 transition-all active:scale-90 shadow-[inset_0_1px_0_rgba(255,218,218,0.1)]">
-<span class="material-symbols-outlined" data-icon="add">add</span>
+<button class="flex-1 bg-surface-container-highest text-on-surface py-4 rounded-full flex items-center justify-center gap-2 font-bold transition-transform active:scale-95 border border-outline-variant/30">
+<span class="material-symbols-outlined text-xl">remove_circle</span>
+<span class="font-headline tracking-tight">- SALIDA</span>
 </button>
 </div>
-</div>
-</div>
-</div>
-<!-- Right: Fields -->
+<!-- Manual Edits Form -->
+<div class="space-y-4">
 <div class="grid grid-cols-2 gap-4">
 <div class="space-y-1">
-<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block pl-2">Precio (Unidad)</label>
-<div class="bg-surface-container-high h-12 flex items-center px-4 border-l-2 border-outline-variant focus-within:border-primary transition-colors">
-<span class="text-on-surface-variant mr-2">$</span>
-<input class="bg-transparent border-none text-on-surface font-headline font-bold focus:ring-0 w-full" type="text" value="45.00"/>
+<label class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest pl-2">Nuevo Precio</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary font-bold">$</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-3 pl-8 pr-4 text-sm focus:ring-1 focus:ring-primary text-on-surface font-headline font-medium" placeholder="0.00" type="number"/>
 </div>
 </div>
 <div class="space-y-1">
-<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block pl-2">Costo (Unidad)</label>
-<div class="bg-surface-container-high h-12 flex items-center px-4 border-l-2 border-outline-variant focus-within:border-primary transition-colors">
-<span class="text-on-surface-variant mr-2">$</span>
-<input class="bg-transparent border-none text-on-surface font-headline font-bold focus:ring-0 w-full" type="text" value="28.40"/>
+<label class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest pl-2">Expiración</label>
+<input class="w-full bg-surface-container-high border-none rounded-full py-3 px-4 text-sm focus:ring-1 focus:ring-primary text-on-surface appearance-none" type="date"/>
 </div>
 </div>
-<div class="col-span-2 space-y-1">
-<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block pl-2">Fecha de Vencimiento</label>
-<div class="bg-surface-container-high h-12 flex items-center px-4 border-l-2 border-outline-variant focus-within:border-primary transition-colors">
-<span class="material-symbols-outlined text-sm mr-2 text-on-surface-variant" data-icon="event">event</span>
-<input class="bg-transparent border-none text-on-surface font-headline font-bold focus:ring-0 w-full" type="text" value="12 / 2025"/>
+<button class="w-full py-3 bg-surface-container-highest/50 border border-outline-variant/20 rounded-xl flex items-center justify-center gap-3 text-on-surface-variant active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">add_a_photo</span>
+<span class="text-xs font-bold uppercase tracking-widest">Foto Técnica de Producto</span>
+</button>
 </div>
 </div>
 </div>
-</div>
-<div class="pt-6">
-<button class="w-full h-14 bg-primary-container text-on-primary-container font-headline font-black tracking-[0.2em] text-sm uppercase hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3 rounded-sm shadow-[0_8px_32px_rgba(128,0,32,0.15)]">
-<span class="material-symbols-outlined" data-icon="save">save</span>
-                    GUARDAR CAMBIOS
-                </button>
-</div>
-</section>
-<!-- Audit Trail / Logs -->
-<section class="space-y-4 opacity-60 hover:opacity-100 transition-opacity pb-12">
-<h3 class="text-[10px] font-bold text-on-surface uppercase tracking-[0.3em] font-headline">Telemetría Reciente</h3>
-<div class="bg-surface-container-lowest p-4 font-mono text-[10px] space-y-2 border border-outline-variant/5">
-<div class="flex justify-between items-center text-tertiary">
-<span>[ 14:22:01 ] ESCANEO_EXITOSO: SKU_AX-9002_WHEY_ISO</span>
-<span class="uppercase">Validado</span>
-</div>
-<div class="flex justify-between items-center text-on-surface-variant">
-<span>[ 14:18:45 ] DESAFÍO_AUTH: OP_082 SECTOR_7G</span>
-<span class="uppercase">Superado</span>
-</div>
-<div class="flex justify-between items-center text-on-surface-variant">
-<span>[ 14:15:30 ] SYNC_SISTEMA: CATÁLOGO_GLOBAL</span>
-<span class="uppercase">Actualizado</span>
-</div>
-</div>
-</section>
+<!-- Floating Action Button for Torch -->
+<button class="fixed right-6 top-24 z-50 w-12 h-12 rounded-full bg-background/60 backdrop-blur-md border border-outline-variant/20 flex items-center justify-center text-primary shadow-xl">
+<span class="material-symbols-outlined">flashlight_on</span>
+</button>
 </main>
-<!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
-<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] transition-all duration-200 active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Panel</span>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#131313]/90 backdrop-blur-xl z-50 border-t border-[#5b403d]/20 rounded-t-[3rem] shadow-[0_-10px_40px_rgba(211,47,47,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-tighter mt-1">Inicio</span>
 </a>
-<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] transition-all duration-200 active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Inventario</span>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined">inventory</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-tighter mt-1">Stock</span>
 </a>
-<a class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-all duration-200 active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Escanear</span>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-tighter mt-1">Sedes</span>
 </a>
-<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] transition-all duration-200 active:scale-90" href="#">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Perfil</span>
+<a class="flex flex-col items-center justify-center text-[#ffb3ac] bg-[#ffb3ac]/10 rounded-full p-3 scale-110" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">filter_center_focus</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-tighter mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-tighter mt-1">Nuevo</span>
 </a>
 </nav>
 </body></html>
