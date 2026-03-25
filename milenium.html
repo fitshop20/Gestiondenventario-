@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GESTIÓN SEDE MILENIUM MALL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#7cb0c0",
+              "on-primary-fixed": "#40000b",
+              "secondary-fixed-dim": "#ffb3b5",
+              "on-primary": "#680018",
+              "outline": "#a78a8a",
+              "error-container": "#93000a",
+              "surface-tint": "#ffb3b5",
+              "surface-bright": "#3a3939",
+              "surface-container-highest": "#353534",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed": "#3b070e",
+              "primary-fixed-dim": "#ffb3b5",
+              "on-tertiary": "#003640",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed": "#b6ebfb",
+              "background": "#131313",
+              "on-secondary": "#571c22",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#114d5b",
+              "on-error": "#690005",
+              "secondary-container": "#743237",
+              "on-surface-variant": "#e0bfbf",
+              "outline-variant": "#584141",
+              "on-primary-fixed-variant": "#8e0f28",
+              "primary-container": "#800020",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-container": "#004451",
+              "secondary": "#ffb3b5",
+              "on-primary-container": "#ff828a",
+              "on-surface": "#e5e2e1",
+              "primary": "#ffb3b5",
+              "on-secondary-fixed-variant": "#743237",
+              "surface": "#131313",
+              "inverse-primary": "#af2b3e",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-container": "#f69da0",
+              "tertiary-fixed-dim": "#9acfde",
+              "surface-container": "#201f1f",
+              "surface-variant": "#353534",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffdada",
+              "tertiary": "#9acfde",
+              "secondary-fixed": "#ffdada"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .scan-line {
+        background: linear-gradient(to bottom, transparent, #9acfde, transparent);
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        animation: scan 3s ease-in-out infinite;
+      }
+      @keyframes scan {
+        0%, 100% { top: 0%; }
+        50% { top: 100%; }
+      }
+      .grid-pattern {
+        background-image: radial-gradient(circle, #584141 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.05;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313] h-16 flex justify-between items-center px-6 border-b border-outline-variant/15">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ffb3b5]" data-icon="factory">factory</span>
+<h1 class="text-lg font-black text-[#e5e2e1] tracking-widest font-headline uppercase">MILENIUM MALL</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 items-center mr-8 font-headline text-sm font-bold tracking-tight">
+<a class="text-[#ffb3b5]" href="#">PANEL</a>
+<a class="text-[#e5e2e1] hover:text-[#ffb3b5] transition-colors" href="#">INVENTARIO</a>
+<a class="text-[#e5e2e1] hover:text-[#ffb3b5] transition-colors" href="#">REPORTES</a>
+</div>
+<button class="p-2 hover:bg-[#2a2a2a] transition-colors active:scale-95 duration-100 rounded">
+<span class="material-symbols-outlined text-[#ffb3b5]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full w-72 z-40 bg-[#131313] border-r border-[#3a3939]/15 pt-20">
+<div class="px-6 py-8 flex items-center gap-4 border-b border-[#3a3939]/10">
+<div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center border border-outline-variant/20 overflow-hidden">
+<img alt="Avatar de Operador" data-alt="minimalist geometric pixel art avatar for a technical operator in deep red and charcoal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhDSd0ldbr57-MEBQnHmKD7oExWcmsqVAgLfJ1k5qhgv7qQ-bzcG5XPApcc0A8Z4AgxZ41SrowOol034dbtTCK8jkuzsEmiX-Ks5lOHZjU0daU042V3u2U5Plq-TxqVTXcKw6xWO-rER2M08ExQoBHsxpAcKeJUps7T3e5GvtigqJ-z644JU8AtmHvSguhuQVOKFtotSAZXvMFQLj7vljmOlwnfNl-DHZwu1hALYLHi5VB2_BJR6Z_dso4XcxCAzVz60AiJ3YuBZhk"/>
+</div>
+<div>
+<p class="font-headline font-black italic text-[#800020] text-xs">OPERADOR_082</p>
+<p class="text-[10px] text-on-surface-variant font-mono">Sector 7G - Nivel 4</p>
+</div>
+</div>
+<nav class="flex-1 mt-4">
+<a class="flex items-center gap-4 bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-headline uppercase text-sm tracking-tighter">Panel de Control</span>
+</a>
+<a class="flex items-center gap-4 text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-headline uppercase text-sm tracking-tighter">Inventario</span>
+</a>
+<a class="flex items-center gap-4 text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span class="font-headline uppercase text-sm tracking-tighter">Escanear</span>
+</a>
+<a class="flex items-center gap-4 text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-headline uppercase text-sm tracking-tighter">Configuración</span>
+</a>
+</nav>
+<div class="p-6">
+<div class="bg-surface-container-low p-3 rounded border border-outline-variant/10">
+<p class="text-[10px] text-primary font-bold mb-1 uppercase tracking-widest">Estado del Sistema</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<p class="text-[10px] text-on-surface">SESIÓN_ACTIVA_ESTABLE</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto relative min-h-screen">
+<div class="absolute inset-0 grid-pattern pointer-events-none"></div>
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 relative z-10">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold bg-primary-container text-on-primary-container px-2 py-0.5 rounded-sm">NODO_MLN</span>
+<span class="text-xs font-medium text-tertiary tracking-widest uppercase">Centro Milenium Mall</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tighter uppercase">
+                    GESTIÓN SEDE <span class="text-primary">MILENIUM MALL</span>
+</h2>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-label text-xs font-bold px-4 py-3 flex items-center gap-2 border border-outline-variant/20 transition-all rounded-sm active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                    EXPORTAR CSV/EXCEL
+                </button>
+<button class="bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container font-label text-xs font-bold px-4 py-3 flex items-center gap-2 shadow-lg transition-all rounded-sm active:scale-95 border-t border-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+                    REPORTE SEDE PDF
+                </button>
+</div>
+</div>
+<!-- Bento Grid Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 relative z-10">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-6 rounded-sm border-l-4 border-primary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="inventory">inventory</span>
+</div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest mb-1">Recuento de Stock</p>
+<p class="text-4xl font-headline font-bold text-on-surface">1,284 <span class="text-sm font-normal text-on-surface-variant">Unidades</span></p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-tertiary material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+<span class="text-tertiary text-[10px] font-bold">+12% vs mes anterior</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-6 rounded-sm border-l-4 border-tertiary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="payments">payments</span>
+</div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest mb-1">Valor del Nodo</p>
+<p class="text-4xl font-headline font-bold text-on-surface">$42,900</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-on-surface-variant text-[10px] font-bold">Valor estimado de activos</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-error-container/10 p-6 rounded-sm border-l-4 border-error relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="warning">warning</span>
+</div>
+<p class="text-error font-label text-xs uppercase tracking-widest mb-1 font-bold">Alertas del Sistema</p>
+<p class="text-4xl font-headline font-bold text-error">03 <span class="text-sm font-normal text-error/70">Críticas</span></p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-error text-[10px] font-bold">Acción requerida: SKU Stock Bajo</span>
+</div>
+</div>
+</div>
+<!-- Inventory List Container -->
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-sm overflow-hidden relative z-10">
+<div class="p-6 bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-outline-variant/10">
+<h3 class="font-headline font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="list_alt">list_alt</span>
+                    INVENTARIO ACTUALIZADO
+                </h3>
+<div class="flex items-center gap-2 bg-surface-container-high px-3 py-2 rounded border border-outline-variant/15 w-full md:w-72">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none text-[10px] focus:ring-0 text-on-surface placeholder:text-on-surface-variant/40 w-full font-bold tracking-widest uppercase" placeholder="BUSCAR SKU O NOMBRE..." type="text"/>
+</div>
+</div>
+<!-- Custom Data Grid -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">
+<tr>
+<th class="px-6 py-4 border-b border-outline-variant/10">Imagen</th>
+<th class="px-6 py-4 border-b border-outline-variant/10">SKU</th>
+<th class="px-6 py-4 border-b border-outline-variant/10">Producto</th>
+<th class="px-6 py-4 border-b border-outline-variant/10">Stock</th>
+<th class="px-6 py-4 border-b border-outline-variant/10">Precio</th>
+<th class="px-6 py-4 border-b border-outline-variant/10">Estado</th>
+<th class="px-6 py-4 border-b border-outline-variant/10 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-high rounded overflow-hidden border border-outline-variant/20">
+<img alt="Proteína Isolatada" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Technical product shot of a black protein powder tub with minimalist red labeling on a dark industrial surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8PToTxGcfaZnqzNn9-wy8ZuSTZDlWA0nxTLrbuHLyRM3DhfpsbNg71zL4q2e28FaErzA5C3olKvtE7bVkQVNKJxOPGX8A3HtPrZZ8BGN_5O3OO0-WyH8g1GQp_zJRdijaV-f64ZxUQmnqQf_TUQH-RmtpJzaXNRB8v7M1If-5-E7SSacZncemKlsfZwV-Zlzo4vjHEDonW8FpynPBk6ZRJRfBsfbnXOGiD6KgI__51hIYQnF-spUPTgOeF9R9VTdjS0dnZeeVO4-I"/>
+</div>
+</td>
+<td class="px-6 py-4 font-mono text-xs text-on-surface-variant">FS-MLN-772</td>
+<td class="px-6 py-4 font-bold text-sm">Proteína Isolatada 5LB</td>
+<td class="px-6 py-4">
+<span class="font-headline font-bold">142</span>
+</td>
+<td class="px-6 py-4 font-mono font-bold text-tertiary">$89.99</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold px-2 py-1 bg-tertiary-container/30 text-tertiary border border-tertiary/20 rounded-full">OPTIMO</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 hover:bg-surface-bright rounded transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-high rounded overflow-hidden border border-outline-variant/20">
+<img alt="Creatina Monohidratada" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="close up of a professional fitness supplement container, monochromatic aesthetic with red accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5fJQHRSdlIeYQCfbQDIi7EsHDk7N0bARrCJV55yrOKZEymXR8kKfl_zHENawgux_nza89Jazvu_tWMhtJrZdXeus-f4w7I3q0abkoFVFHHa9rwefeaz13RYLgccI5PeQKHQvtw8a65s5xGwJobH16C8xS_fI8TG9lgl_4D1wLdTHrjByQeELtB19GDJKUY7Q1tGAUwp37Uu9VvXIr-KArNEycFVPAx1yFw4L8wHDM0vlgCe3eQ8ebL2eIo3L-_Bwn67fXVGAkQOLR"/>
+</div>
+</td>
+<td class="px-6 py-4 font-mono text-xs text-on-surface-variant">FS-MLN-312</td>
+<td class="px-6 py-4 font-bold text-sm">Creatina Micronizada</td>
+<td class="px-6 py-4">
+<span class="font-headline font-bold text-error">12</span>
+</td>
+<td class="px-6 py-4 font-mono font-bold text-tertiary">$34.50</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold px-2 py-1 bg-error-container/30 text-error border border-error/20 rounded-full">CRITICO</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 hover:bg-surface-bright rounded transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-high rounded overflow-hidden border border-outline-variant/20">
+<img alt="Pre-Workout Elite" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="industrial canister of athletic supplement with high contrast lighting and technical labels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAbw8nNhnKfZJrB_6LzCgS_L4NTeGfzL5Qw_dAIpzwp_YY32WXs5YIfWYi1npiMlml32936ClFyKoIcFoOPwwJSi6gDgs2goZYwCUryXyajZV2kORmdI8WlVFvTVIoEJCnERFAO0u_QdgiYM4VRdXz3OkHt52K5xlevThM-i11mXma0SsZJGgLHuVL7493R5J7dCjCPxIBxVqQXYXV6MA0aoh13Ze7Qijob8VMkS24rQjz3iyRB1cokDBV9NBouJlqDi82DN1CT9zq"/>
+</div>
+</td>
+<td class="px-6 py-4 font-mono text-xs text-on-surface-variant">FS-MLN-901</td>
+<td class="px-6 py-4 font-bold text-sm">Pre-Workout Elite X</td>
+<td class="px-6 py-4">
+<span class="font-headline font-bold">58</span>
+</td>
+<td class="px-6 py-4 font-mono font-bold text-tertiary">$45.00</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold px-2 py-1 bg-on-secondary-fixed-variant/30 text-primary border border-primary/20 rounded-full">ESTABLE</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 hover:bg-surface-bright rounded transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer -->
+<div class="p-4 bg-surface-container-low border-t border-outline-variant/10 flex justify-between items-center">
+<p class="text-[10px] text-on-surface-variant font-bold">MOSTRANDO 1-10 DE 156 REGISTROS</p>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-high border border-outline-variant/20 text-on-surface rounded-sm hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary-container text-on-primary-container rounded-sm font-bold text-[10px]">1</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-high border border-outline-variant/20 text-on-surface rounded-sm hover:bg-surface-bright transition-colors font-bold text-[10px]">2</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-high border border-outline-variant/20 text-on-surface rounded-sm hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Scanning FAB (Contextual) -->
+<button class="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-50 w-16 h-16 bg-primary-container text-on-primary-container shadow-[0_0_20px_rgba(128,0,32,0.4)] flex items-center justify-center rounded-sm group active:scale-90 transition-all border-t border-primary/30">
+<span class="material-symbols-outlined text-3xl" data-icon="qr_code_scanner">qr_code_scanner</span>
+<div class="absolute -top-12 right-0 bg-[#0e0e0e] text-primary text-[10px] font-bold px-3 py-1 rounded-sm border border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            ESCANEAR_NUEVO_STOCK
+        </div>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
+<a class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-
