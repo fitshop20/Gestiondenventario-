@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GESTIÓN SEDE SAN LUIS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#7cb0c0",
+                        "on-primary-fixed": "#40000b",
+                        "secondary-fixed-dim": "#ffb3b5",
+                        "on-primary": "#680018",
+                        "outline": "#a78a8a",
+                        "error-container": "#93000a",
+                        "surface-tint": "#ffb3b5",
+                        "surface-bright": "#3a3939",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed": "#3b070e",
+                        "primary-fixed-dim": "#ffb3b5",
+                        "on-tertiary": "#003640",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed": "#b6ebfb",
+                        "background": "#131313",
+                        "on-secondary": "#571c22",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#114d5b",
+                        "on-error": "#690005",
+                        "secondary-container": "#743237",
+                        "on-surface-variant": "#e0bfbf",
+                        "outline-variant": "#584141",
+                        "on-primary-fixed-variant": "#8e0f28",
+                        "primary-container": "#800020",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#004451",
+                        "secondary": "#ffb3b5",
+                        "on-primary-container": "#ff828a",
+                        "on-surface": "#e5e2e1",
+                        "primary": "#ffb3b5",
+                        "on-secondary-fixed-variant": "#743237",
+                        "surface": "#131313",
+                        "inverse-primary": "#af2b3e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#f69da0",
+                        "tertiary-fixed-dim": "#9acfde",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#ffdada",
+                        "tertiary": "#9acfde",
+                        "secondary-fixed": "#ffdada"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .grid-bg {
+            background-image: linear-gradient(rgba(88, 65, 65, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(88, 65, 65, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .metallic-sheen {
+            background: linear-gradient(45deg, #ffb3b5 0%, #800020 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="grid-bg min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313] h-16 flex justify-between items-center px-6 border-b border-[#3a3939]/15">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ffb3b5]">factory</span>
+<span class="text-lg font-black text-[#e5e2e1] tracking-widest font-['Space_Grotesk']">GESTIÓN SEDE SAN LUIS</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#2a2a2a] transition-colors rounded-sm text-[#e5e2e1]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-[#2a2a2a] transition-colors rounded-sm text-[#ffb3b5]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full w-72 z-40 bg-[#131313] border-r border-[#3a3939]/15 pt-20">
+<div class="px-6 py-4 flex items-center gap-4 border-b border-[#3a3939]/10 mb-4">
+<div class="w-10 h-10 rounded-sm bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-sm font-black text-[#e5e2e1] font-['Space_Grotesk']">OPERADOR_082</p>
+<p class="text-[10px] text-[#e5e2e1]/50 tracking-wider">SECTOR 7G - NIVEL AUT. 4</p>
+</div>
+</div>
+<nav class="flex flex-col">
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] transition-all font-['Space_Grotesk'] uppercase text-sm tracking-tighter" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">dashboard</span>
+                    Panel de Control
+                </div>
+</a>
+<a class="bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 font-['Space_Grotesk'] uppercase text-sm tracking-tighter" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">inventory_2</span>
+                    Inventario
+                </div>
+</a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] transition-all font-['Space_Grotesk'] uppercase text-sm tracking-tighter" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+                    Escanear
+                </div>
+</a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] transition-all font-['Space_Grotesk'] uppercase text-sm tracking-tighter" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">settings</span>
+                    Configuración
+                </div>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="pt-20 pb-24 lg:pl-72 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Header & Action Row -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h1 class="text-4xl font-bold font-['Space_Grotesk'] text-[#e5e2e1] tracking-tight mb-2">GESTIÓN SEDE <span class="text-[#ffb3b5]">SAN LUIS</span></h1>
+<p class="text-on-surface-variant font-['Inter'] text-sm tracking-widest uppercase">Nodo de Distribución Operativo</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-[#201f1f] hover:bg-[#2a2a2a] text-[#e5e2e1] px-4 py-2 flex items-center gap-2 border-l-2 border-[#800020] transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+<span class="text-xs font-bold uppercase tracking-wider font-['Inter']">Reporte Sede PDF</span>
+</button>
+<button class="bg-primary-container hover:brightness-110 text-on-primary-container px-6 py-2 flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="text-xs font-black uppercase tracking-widest font-['Inter']">Nuevo Item</span>
+</button>
+</div>
+</div>
+<!-- Node Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+<!-- Metric 1: Stock Count -->
+<div class="bg-surface-container-low p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">inventory</span>
+</div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mb-4">Unidades Totales de Stock</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-5xl font-bold font-['Space_Grotesk'] text-[#e5e2e1]">1,284</h2>
+<span class="text-tertiary text-xs font-bold font-['Inter']">+12%</span>
+</div>
+<div class="mt-4 h-1 w-full bg-[#131313]">
+<div class="h-full bg-tertiary" style="width: 75%"></div>
+</div>
+</div>
+<!-- Metric 2: Critical Alerts -->
+<div class="bg-surface-container-low p-6 relative overflow-hidden group border-l-4 border-error-container">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-error">warning</span>
+</div>
+<p class="text-[10px] text-error uppercase tracking-[0.2em] mb-4">Alertas Críticas (&lt;10 Unidades)</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-5xl font-bold font-['Space_Grotesk'] text-error">09</h2>
+<span class="text-on-surface-variant text-xs font-['Inter']">Items Requieren Reabastecimiento</span>
+</div>
+<div class="mt-4 flex gap-1">
+<div class="h-1 flex-1 bg-error"></div>
+<div class="h-1 flex-1 bg-error"></div>
+<div class="h-1 flex-1 bg-error"></div>
+<div class="h-1 flex-1 bg-[#131313]"></div>
+</div>
+</div>
+<!-- Metric 3: Node Value -->
+<div class="bg-surface-container-low p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">payments</span>
+</div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mb-4">Valor Estimado del Nodo</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-bold font-['Space_Grotesk'] text-[#ffb3b5]">$42.8K</h2>
+<span class="text-on-surface-variant text-xs font-['Inter']">USD Total</span>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-[10px] text-tertiary font-bold tracking-widest font-['Inter'] uppercase">Valuación: Estable</span>
+</div>
+</div>
+</div>
+<!-- Inventory List Section -->
+<div class="bg-surface-container rounded-sm overflow-hidden">
+<div class="px-6 py-4 flex justify-between items-center border-b border-[#3a3939]/10">
+<div class="flex items-center gap-4">
+<h3 class="font-['Space_Grotesk'] font-bold text-lg">REGISTRO DE ACTIVOS</h3>
+<span class="bg-[#3a3939] text-[10px] px-2 py-0.5 rounded-sm text-on-surface font-bold">NODO_01_SL</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-xs text-[#e5e2e1]/60 hover:text-white flex items-center gap-1 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">filter_alt</span> Filtrar
+                    </button>
+<button class="text-xs text-[#e5e2e1]/60 hover:text-white flex items-center gap-1 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">download</span> Exportar
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] uppercase tracking-widest text-on-surface-variant border-b border-[#3a3939]/10">
+<th class="px-6 py-4 font-bold">Imagen</th>
+<th class="px-6 py-4 font-bold">SKU / Nombre</th>
+<th class="px-6 py-4 font-bold">Estado</th>
+<th class="px-6 py-4 font-bold text-right">Stock</th>
+<th class="px-6 py-4 font-bold text-right">Precio Unit.</th>
+<th class="px-6 py-4 font-bold text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="text-sm font-['Inter']">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer group">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-sm p-1">
+<img alt="Thumbnail Producto" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVUcSdpG1Q1EXE1NuREJHF3BNa0WYB6o6A5kMWlxIj0nUefAMq9rhVQPVPDv5lgF9dtusLbR4fYWKRktcQfPPkNx6UX-bbZxOVVsuRmLNXo2nWHIgkFGGxiTUC3MK75h1nzn6IUYnzwcxKc1qXGtvQ1uab9bSpRS3EogRW9BMSY44krbmpHyd6jsV-O1AOVjwjSHTWK36qsSjSyv16-W5vJ_aKWTL3mxoR0qepWu2cZAaLJROXz0g9ymMU4lcT4-atk2yARoL2waCN"/>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="font-bold text-[#e5e2e1]">FS-DMB-025</p>
+<p class="text-xs text-on-surface-variant">Mancuerna Hex 25LB - FitShop Heavy</p>
+</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-tertiary-fixed-dim bg-tertiary-container/30 px-2 py-0.5 rounded-sm uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> En Stock
+                                </span>
+</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] font-bold text-lg">42</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] text-[#ffb3b5]">$85.00</td>
+<td class="px-6 py-4">
+<div class="flex justify-center gap-2">
+<button class="p-2 hover:bg-[#800020]/20 text-[#ffb3b5] rounded-sm transition-all"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-2 hover:bg-surface-variant text-on-surface-variant rounded-sm transition-all"><span class="material-symbols-outlined text-sm">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer group border-t border-[#3a3939]/5">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-sm p-1">
+<img alt="Thumbnail Producto" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuUeIzsw8OJXour84IkvMgT4sjAtHRmdlI4rFNrzyCPwXtkPXLMgxqGFqHPhWTBGp3OTMQtBP9bSbE2b_i-l2snap8nu2iW_n3qqPyT_Ikib8x80NRohy9vnoK7eDwqp-3v2SeVD3A7We3T4o6OiywOF-5KZh4PZFpzrbxj9SQ7Tfay-6589h7EFrBneZeVNvpK5UYCe5_O30zjbvP900c7AHEAtzWcY2tQ7igfwHhrzQpyiREuMjuR0D_dbMFAURNBL_-I9-MmG20"/>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="font-bold text-[#e5e2e1]">FS-KTB-016</p>
+<p class="text-xs text-on-surface-variant">Pesa Rusa Competición 16KG</p>
+</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-error bg-error-container/20 px-2 py-0.5 rounded-sm uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Stock Crítico
+                                </span>
+</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] font-bold text-lg text-error">04</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] text-[#ffb3b5]">$112.50</td>
+<td class="px-6 py-4">
+<div class="flex justify-center gap-2">
+<button class="p-2 hover:bg-[#800020]/20 text-[#ffb3b5] rounded-sm transition-all"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-2 hover:bg-surface-variant text-on-surface-variant rounded-sm transition-all"><span class="material-symbols-outlined text-sm">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer group border-t border-[#3a3939]/5">
+<td class="px-6 py-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-sm p-1">
+<img alt="Thumbnail Producto" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcwgwMGp9xLT8SxzHVw3_dzGIsbzfek9LHGkqKU3CIFppJEw8qvDIUiN26sS_Gkf-Rj6e8arxh9X4maHm-tLyxssHf0iDz7EYQNBwHBFoEm44D0V8fq4tR5Rl3RGX35wHNzAmiGu5ApfwV30wFSqZmJcCxa70agJTH8IPf_oRQ5YK2QRYZGBBZs64yWuZw4-abn8yLtWicjkixcrpYbwbLnLR4hWyOuyrnFzvrejjRmqEyd386abI3YiahkXeJTnaNJ0tgUeAcGQIK"/>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="font-bold text-[#e5e2e1]">FS-BRL-7FT</p>
+<p class="text-xs text-on-surface-variant">Barra Olímpica 7 pies - Cromo</p>
+</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-tertiary-fixed-dim bg-tertiary-container/30 px-2 py-0.5 rounded-sm uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> En Stock
+                                </span>
+</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] font-bold text-lg">18</td>
+<td class="px-6 py-4 text-right font-['Space_Grotesk'] text-[#ffb3b5]">$299.99</td>
+<td class="px-6 py-4">
+<div class="flex justify-center gap-2">
+<button class="p-2 hover:bg-[#800020]/20 text-[#ffb3b5] rounded-sm transition-all"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-2 hover:bg-surface-variant text-on-surface-variant rounded-sm transition-all"><span class="material-symbols-outlined text-sm">history</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 border-t border-[#3a3939]/10 bg-surface-container-low flex justify-between items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Mostrando 1-3 de 84 ACTIVOS</span>
+<div class="flex gap-1">
+<button class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-bold rounded-sm">1</button>
+<button class="px-3 py-1 hover:bg-surface-container-highest text-on-surface-variant text-xs font-bold rounded-sm transition-colors">2</button>
+<button class="px-3 py-1 hover:bg-surface-container-highest text-on-surface-variant text-xs font-bold rounded-sm transition-colors">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="px-3 py-1 hover:bg-surface-container-highest text-on-surface-variant text-xs font-bold rounded-sm transition-colors">28</button>
+</div>
+</div>
+</div>
+<!-- Footer Reporting Section -->
+<div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container p-6 flex items-center justify-between border-l-4 border-tertiary">
+<div>
+<h4 class="font-['Space_Grotesk'] font-bold text-[#e5e2e1] uppercase text-sm mb-1">Exportación de Datos</h4>
+<p class="text-[10px] text-on-surface-variant tracking-wider">GENERAR CAPTURA TOTAL DEL SISTEMA</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 bg-surface-container-high hover:bg-[#2a2a2a] text-[#ffb3b5] border border-outline-variant/20 transition-all rounded-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">grid_on</span>
+<span class="text-[10px] font-black uppercase tracking-widest">CSV</span>
+</button>
+<button class="p-3 bg-surface-container-high hover:bg-[#2a2a2a] text-[#ffb3b5] border border-outline-variant/20 transition-all rounded-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span class="text-[10px] font-black uppercase tracking-widest">Excel</span>
+</button>
+</div>
+</div>
+<div class="bg-primary-container p-6 relative group overflow-hidden cursor-pointer flex items-center justify-between">
+<div class="absolute inset-0 metallic-sheen opacity-20 group-hover:opacity-30 transition-opacity"></div>
+<div class="relative z-10">
+<h4 class="font-['Space_Grotesk'] font-bold text-on-primary-container uppercase text-sm mb-1">Herramienta de Optimización</h4>
+<p class="text-[10px] text-on-primary-container/80 tracking-wider">ANALIZAR ROTACIÓN DE INVENTARIO</p>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-on-primary-container text-3xl">analytics</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
+<button class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2">
+<span class="material-
