@@ -3,7 +3,7 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FitShop Elite | Sede San Ignacio</title>
+<title>FitShop - Sede San Luis (INGENIERÍA FINAL)</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -14,53 +14,53 @@
         theme: {
           extend: {
             colors: {
-              "on-primary": "#51221e",
-              "surface-dim": "#131313",
-              "tertiary-fixed": "#bee9ff",
-              "inverse-surface": "#e5e2e1",
-              "primary-container": "#9d5f5a",
-              "on-secondary-fixed-variant": "#930010",
-              "surface-container": "#201f1f",
-              "on-primary-fixed": "#370d0b",
-              "on-secondary-fixed": "#410003",
-              "secondary": "#ffb3ac",
-              "on-tertiary-container": "#e9f7ff",
-              "on-surface": "#e5e2e1",
-              "tertiary-container": "#00799c",
-              "outline": "#ab8985",
-              "on-tertiary": "#003546",
-              "surface-container-lowest": "#0e0e0e",
-              "primary-fixed-dim": "#ffb3ac",
-              "inverse-primary": "#894e49",
-              "surface-container-low": "#1c1b1b",
-              "tertiary-fixed-dim": "#7bd1f8",
-              "on-error-container": "#ffdad6",
-              "surface-container-highest": "#353534",
-              "on-surface-variant": "#e4beba",
-              "secondary-container": "#a40213",
-              "error-container": "#93000a",
-              "on-tertiary-fixed": "#001f2a",
-              "surface-bright": "#393939",
-              "on-primary-container": "#fff2f0",
-              "secondary-fixed-dim": "#ffb3ac",
-              "inverse-on-surface": "#313030",
-              "primary": "#ffb3ac",
-              "on-secondary": "#680008",
-              "on-error": "#690005",
-              "surface-tint": "#ffb3ac",
-              "on-background": "#e5e2e1",
+              "on-secondary-container": "#ffaea6",
               "surface-variant": "#353534",
+              "on-surface-variant": "#e4beba",
+              "secondary-fixed": "#ffdad6",
+              "secondary-container": "#a40213",
+              "on-primary-fixed-variant": "#6d3733",
+              "on-primary-fixed": "#370d0b",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#930010",
               "error": "#ffb4ab",
+              "surface-dim": "#131313",
+              "surface-bright": "#393939",
+              "secondary": "#ffb3ac",
+              "primary-container": "#9d5f5a",
+              "on-tertiary-fixed": "#001f2a",
+              "surface-container-highest": "#353534",
+              "on-surface": "#e5e2e1",
+              "tertiary-fixed": "#bee9ff",
+              "outline": "#ab8985",
+              "surface-container": "#201f1f",
+              "on-tertiary-fixed-variant": "#004d65",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed-dim": "#7bd1f8",
+              "tertiary-container": "#00799c",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-on-surface": "#313030",
+              "on-tertiary": "#003546",
+              "primary-fixed": "#ffdad6",
+              "surface-tint": "#ffb3ac",
+              "error-container": "#93000a",
+              "surface": "#131313",
+              "on-error": "#690005",
+              "on-tertiary-container": "#e9f7ff",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-container": "#fff2f0",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary-fixed": "#410003",
+              "outline-variant": "#5b403d",
+              "secondary-fixed-dim": "#ffb3ac",
+              "background": "#131313",
+              "inverse-primary": "#894e49",
+              "primary-fixed-dim": "#ffb3ac",
+              "on-secondary": "#680008",
               "tertiary": "#7bd1f8",
               "surface-container-high": "#2a2a2a",
-              "primary-fixed": "#ffdad6",
-              "outline-variant": "#5b403d",
-              "on-tertiary-fixed-variant": "#004d65",
-              "on-primary-fixed-variant": "#6d3733",
-              "background": "#131313",
-              "secondary-fixed": "#ffdad6",
-              "on-secondary-container": "#ffaea6",
-              "surface": "#131313"
+              "primary": "#ffb3ac",
+              "on-primary": "#51221e"
             },
             fontFamily: {
               "headline": ["Space Grotesk"],
@@ -73,166 +73,230 @@
       }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #131313;
-            color: #e5e2e1;
-            font-family: 'Inter', sans-serif;
-        }
-        .headline-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(12px); background: rgba(19, 19, 19, 0.7); }
     </style>
 </head>
-<body class="overflow-x-hidden">
-<!-- SideNavBar (Desktop) -->
-<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-[#131313] h-screen w-64 hidden md:flex left-0 border-r-0 z-50 tonal-layering bg-[#1c1b1b] shadow-[20px_0_40px_rgba(211,47,47,0.02)]">
-<div class="px-6 mb-8">
-<h1 class="text-xl font-black text-[#e5e2e1] uppercase headline-font tracking-tighter">FitShop Elite</h1>
-<p class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-primary">Gestión de Activos</p>
+<body class="flex min-h-screen">
+<!-- LADO IZQUIERDO: SideNavBar (Basado en JSON) -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r-0 bg-[#131313] py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold text-[#e5e2e1] font-headline tracking-widest uppercase">FitShop</h1>
+<p class="text-[10px] text-primary font-medium tracking-widest mt-1">ARCHIVO KINÉTICO V1.0</p>
 </div>
-<nav class="flex-1 space-y-2 px-2">
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
-<span class="material-symbols-outlined mr-3">dashboard</span>
-                Panel
-            </a>
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
-<span class="material-symbols-outlined mr-3">inventory_2</span>
-                Inventario
-            </a>
-<a class="flex items-center bg-gradient-to-r from-[#d32f2f] to-[#9d5f5a] text-white rounded-full mx-2 px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs transition-all hover:translate-x-1 duration-200 shadow-lg shadow-primary/10" href="#">
-<span class="material-symbols-outlined mr-3">storefront</span>
-                Tiendas
-            </a>
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
-<span class="material-symbols-outlined mr-3">qr_code_scanner</span>
-                Escáner
-            </a>
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
-<span class="material-symbols-outlined mr-3">add_box</span>
-                Registro
-            </a>
+<nav class="flex-1 space-y-2">
+<!-- Dashboard (Activo por defecto en vista principal) -->
+<a class="bg-gradient-to-r from-red-600 to-[#9d5f5a] text-white rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 font-headline text-[12px] tracking-widest uppercase transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 font-headline text-[12px] tracking-widest uppercase transition-all duration-300 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Inventario</span>
+</a>
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 font-headline text-[12px] tracking-widest uppercase transition-all duration-300 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span>Envíos</span>
+</a>
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 font-headline text-[12px] tracking-widest uppercase transition-all duration-300 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span>Analíticas</span>
+</a>
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 font-headline text-[12px] tracking-widest uppercase transition-all duration-300 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Configuración</span>
+</a>
 </nav>
-<div class="px-6 py-4 mt-auto">
-<button class="w-full py-3 bg-surface-container-highest rounded-full headline-font font-bold text-xs uppercase tracking-widest text-primary hover:bg-surface-bright transition-colors active:scale-95 duration-150">
-                Escanear SKU
+<div class="mt-auto px-4 space-y-4">
+<button class="w-full bg-surface-container-highest text-on-surface py-3 rounded-xl flex items-center justify-center gap-2 font-headline text-[11px] tracking-tighter uppercase hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+                ESCANEAR NUEVO ITEM
             </button>
+<div class="pt-4 border-t border-outline-variant/20">
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full px-4 py-2 flex items-center gap-3 font-headline text-[10px] tracking-widest uppercase transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                    Soporte
+                </a>
+<a class="text-[#e5e2e1] hover:bg-[#201f1f] rounded-full px-4 py-2 flex items-center gap-3 font-headline text-[10px] tracking-widest uppercase transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Cerrar Sesión
+                </a>
 </div>
-<div class="border-t border-outline-variant/10 pt-4 px-2 space-y-1">
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all" href="#">
-<span class="material-symbols-outlined mr-3">settings</span>
-                Configuración
-            </a>
-<a class="flex items-center text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs hover:bg-[#201f1f] rounded-full mx-2 transition-all text-error" href="#">
-<span class="material-symbols-outlined mr-3">logout</span>
-                Cerrar Sesión
-            </a>
 </div>
 </aside>
-<!-- TopAppBar (Mobile) -->
-<header class="fixed top-0 w-full flex justify-between items-center px-6 h-16 md:hidden z-40 bg-[#131313]/70 backdrop-blur-md tonal-shift bg-[#1c1b1b]">
-<div class="text-2xl font-black tracking-tighter text-[#e5e2e1] uppercase headline-font">FitShop</div>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (Basado en JSON) -->
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 glass-header z-40 flex justify-between items-center px-6">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#e5e2e1]/60">notifications</span>
-<span class="material-symbols-outlined text-[#e5e2e1]/60">account_circle</span>
+<h2 class="text-2xl font-black text-red-600 tracking-tighter uppercase font-headline">SEDE SAN LUIS</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container px-4 py-1.5 rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm opacity-50 mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-on-surface placeholder-on-surface-variant/50" placeholder="Buscar en inventario..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-[#353534] rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="qr_code_scanner">qr_code_scanner</span>
+</button>
+<button class="p-2 hover:bg-[#353534] rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="add_box">add_box</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+<img alt="User Profile" class="h-full w-full object-cover" data-alt="portrait of a focused professional manager in a modern industrial setting with warm low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-28mQ1vOJImlpx4th205Bc4gVZkLa3jd1vCxItcC3yMKbwblB3R3Rrlhk4LCrCoP69Ut1PqKrwNPgGBWG9uIQpV8wmW1PAj8ne2ufrlcfdzQX81Kc4X1kCJAt1dBsXRbMSILUs2Ns6kHeXtGGB2QXiYeiXEfjTsUOhewPW4b26w6T7o4i7m0xa4RmQj5pVluQJRrcfMy4ZslqFGBbQip2IxiY-TxD3kh9O4i16ce07QvyWgm_sJLzLgQgCuL_4TLI1eAXTlkcbLCu"/>
+</div>
+</div>
 </div>
 </header>
-<!-- Main Content Canvas -->
-<main class="md:ml-64 min-h-screen pt-20 pb-24 md:pt-12 md:pb-12 px-6 lg:px-12 transition-all">
-<!-- Header Section: Identity -->
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
-<div class="space-y-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-4xl">location_on</span>
-<h2 class="text-4xl md:text-6xl font-black headline-font tracking-tighter uppercase text-[#e5e2e1]">Sede San Ignacio</h2>
-</div>
-<p class="text-on-surface-variant headline-font tracking-[0.2em] uppercase text-xs opacity-70">Control de Existencias en Tiempo Real</p>
+<!-- CANVAS DE CONTENIDO -->
+<div class="pt-24 px-6 pb-12 max-w-7xl mx-auto w-full">
+<!-- HEADER DE SECCIÓN Y ACCIONES RÁPIDAS -->
+<section class="mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h3 class="text-[12px] font-bold text-primary tracking-[0.2em] uppercase mb-2">Panel de Control</h3>
+<h1 class="text-5xl font-black font-headline tracking-tighter text-on-surface leading-none">INGENIERÍA FINAL</h1>
 </div>
 <div class="flex flex-wrap gap-3">
-<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest rounded-full headline-font font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-all">
-<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
-                    Descargar PDF
-                </button>
-<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest rounded-full headline-font font-bold text-xs uppercase tracking-widest hover:bg-surface-bright transition-all">
-<span class="material-symbols-outlined text-sm">table_chart</span>
-                    Exportar Excel
-                </button>
-</div>
-</div>
-<!-- Empty State Hero Card -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
-<div class="lg:col-span-8 bg-surface-container-low rounded-xl md:rounded-lg p-8 md:p-12 flex flex-col items-center justify-center text-center border border-dashed border-outline-variant/30 min-h-[400px]">
-<div class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center mb-6 relative">
-<span class="material-symbols-outlined text-primary/20 text-6xl animate-pulse">inventory</span>
-<div class="absolute inset-0 bg-primary/5 rounded-full blur-xl"></div>
-</div>
-<h3 class="text-2xl md:text-3xl font-bold headline-font text-on-surface mb-2">No hay productos registrados</h3>
-<p class="text-on-surface-variant max-w-md mx-auto mb-8 font-body">
-                    Esta sede aún no cuenta con activos vinculados. Comience el escaneo o cargue productos manualmente para habilitar el seguimiento.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4 w-full max-w-lg">
-<button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-4 px-8 rounded-full headline-font uppercase tracking-widest text-xs flex items-center justify-center gap-2 shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
-<span class="material-symbols-outlined">qr_code_scanner</span>
-                        Escanear Nuevo Item
+<button class="px-6 py-3 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center gap-2 font-headline text-xs font-bold tracking-widest hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+                        REPORTE PDF
                     </button>
-<button class="flex-1 bg-surface-container-highest text-on-surface font-bold py-4 px-8 rounded-full headline-font uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-surface-bright active:scale-95 transition-all">
-<span class="material-symbols-outlined">edit_note</span>
-                        Cargar Producto Manual
+<button class="px-6 py-3 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center gap-2 font-headline text-xs font-bold tracking-widest hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined" data-icon="table_view">table_view</span>
+                        EXPORTAR EXCEL
                     </button>
 </div>
+</section>
+<!-- BENTO GRID DE KPIs -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+<div class="md:col-span-2 p-8 rounded-xl bg-surface-container-low flex flex-col justify-between relative overflow-hidden h-48">
+<div class="z-10">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Capacidad Total Utilizada</p>
+<h4 class="text-6xl font-black font-headline text-on-surface">0%</h4>
 </div>
-<!-- Side Stats/Context (Empty State Version) -->
-<div class="lg:col-span-4 space-y-6">
-<div class="bg-surface-container rounded-lg p-8 flex flex-col justify-between h-full border-l-4 border-primary/20">
+<div class="absolute right-[-10%] bottom-[-20%] opacity-10">
+<span class="material-symbols-outlined text-[180px] text-primary" data-icon="warehouse">warehouse</span>
+</div>
+<div class="z-10 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<p class="text-[11px] font-medium text-primary uppercase">Esperando Ingreso Inicial</p>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container flex flex-col justify-between h-48">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Items en Stock</p>
 <div>
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-primary">analytics</span>
-<span class="text-[10px] headline-font uppercase tracking-widest text-on-surface-variant">Estado Actual</span>
+<h4 class="text-5xl font-black font-headline text-on-surface">0</h4>
+<p class="text-[10px] text-red-500 font-bold mt-1">Sede Vacía</p>
 </div>
-<div class="text-5xl font-black headline-font mb-2">0</div>
-<div class="text-[10px] headline-font uppercase tracking-[0.2em] text-on-surface-variant">Unidades Totales</div>
 </div>
-<div class="mt-8 space-y-4">
-<div class="h-[2px] w-full bg-outline-variant/20 relative">
-<div class="absolute left-0 top-0 h-full w-0 bg-primary shadow-[0_0_10px_#ffb3ac]"></div>
-</div>
-<div class="flex justify-between text-[10px] headline-font uppercase tracking-widest text-on-surface-variant/60">
-<span>Capacidad Sede</span>
-<span>0% Uso</span>
+<div class="p-8 rounded-xl bg-surface-container flex flex-col justify-between h-48">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">En Tránsito</p>
+<div>
+<h4 class="text-5xl font-black font-headline text-tertiary">--</h4>
+<p class="text-[10px] text-on-surface-variant/50 font-medium mt-1">Sin Envíos Pendientes</p>
 </div>
 </div>
 </div>
+<!-- ÁREA DE INVENTARIO VACÍO (ESTADO INICIAL) -->
+<section class="bg-surface-container-low rounded-lg p-12 border border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center min-h-[400px]">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant/30" data-icon="inventory">inventory</span>
+</div>
+<h2 class="text-3xl font-bold font-headline text-on-surface mb-2 tracking-tight">ALMACÉN LISTO PARA OPERAR</h2>
+<p class="text-on-surface-variant max-w-md mb-10 font-body">La sede San Luis se encuentra actualmente sin existencias. Inicie el proceso de carga para visualizar el inventario.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-primary-container text-on-primary font-headline font-bold tracking-widest text-sm flex items-center gap-3 shadow-[0px_20px_40px_rgba(255,179,172,0.15)] hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+                        ESCANEAR NUEVO ITEM
+                    </button>
+<button class="px-8 py-4 rounded-full bg-surface-container-highest text-on-surface font-headline font-bold tracking-widest text-sm flex items-center gap-3 hover:bg-surface-bright transition-colors active:scale-95 border border-outline-variant/20">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+                        CARGAR PRODUCTO MANUAL
+                    </button>
+</div>
+</section>
+<!-- SECCIÓN DE REFERENCIA VISUAL (EDITORIAL) -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square rounded-lg overflow-hidden grayscale contrast-125 opacity-40">
+<img alt="Warehouse Atmosphere" class="w-full h-full object-cover" data-alt="moody dark interior of a high-tech athletic equipment warehouse with industrial lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscKERKGmd9GsJYpMSNm-SgXcTzbqDkW3Y_O7rFEHJXeuihhU2KxlyD6Ytx2esNNJWPEMTnJWk-AQM6CjToI3w4bH4hN8C-wm61kysZmQH35Tki7KtPB-XNvnluy9LAG9lYyBbcpHimCaOz-7HGwJlnBcKagC2qVXktKCMUGja9Rk7aAGftMg1TQAcKVjihecsh0ruKdBfw55kQnAGhL2TFsUJZXWYQzB8v-GqlTKQ0Rshr8Dz4oh4UQTuzS-l8vgmcIHZ515639MD"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 rounded-xl bg-surface-container p-6 shadow-2xl border border-outline-variant/10">
+<p class="text-[10px] font-bold text-primary tracking-widest uppercase mb-4">Ubicación Estratégica</p>
+<div class="w-full h-32 rounded-lg overflow-hidden bg-surface-dim mb-4 border border-outline-variant/20">
+<!-- Mapa Ficticio -->
+<div class="w-full h-full bg-neutral-900 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle, #ffb3ac 1px, transparent 1px); background-size: 20px 20px;"></div>
 </div>
 </div>
-<!-- Placeholder Section for Inventory List -->
-<div class="bg-surface-container-low rounded-xl overflow-hidden">
-<div class="px-8 py-6 flex items-center justify-between border-b border-outline-variant/10">
-<h4 class="headline-font font-bold uppercase tracking-widest text-xs text-on-surface-variant">Listado Detallado</h4>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant/40 cursor-not-allowed">filter_list</span>
-<span class="material-symbols-outlined text-on-surface-variant/40 cursor-not-allowed">search</span>
+<p class="text-xs font-bold font-headline text-on-surface">SECTOR INDUSTRIAL SAN LUIS</p>
+<p class="text-[10px] text-on-surface-variant">Centro Logístico V2</p>
 </div>
 </div>
-<div class="h-64 flex items-center justify-center text-on-surface-variant/20 italic">
-<span class="headline-font tracking-widest text-xs uppercase">Bandeja de entrada vacía</span>
+<div>
+<h5 class="text-primary font-headline font-bold text-[12px] tracking-[0.3em] uppercase mb-4">Protocolo de Ingeniería</h5>
+<h2 class="text-4xl font-black font-headline text-on-surface leading-tight mb-6">OPTIMIZACIÓN DE<br/>ACTIVOS EN TIEMPO REAL</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        Nuestra infraestructura en San Luis utiliza el sistema de <strong>Archivo Kinético</strong> para asegurar que cada unidad sea rastreada con precisión quirúrgica. 
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-wide">Trazabilidad Total</p>
+<p class="text-xs text-on-surface-variant">Monitoreo desde ingreso hasta despacho final.</p>
 </div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-wide">Auditoría Automatizada</p>
+<p class="text-xs text-on-surface-variant">Reportes inteligentes generados por cada movimiento.</p>
 </div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<!-- FOOTER / ESTADO DEL SISTEMA -->
+<footer class="mt-auto px-8 py-6 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-medium tracking-widest text-on-surface-variant/50 uppercase">
+<div class="flex items-center gap-6">
+<span>© 2024 FitShop Global</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> SISTEMA ONLINE</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos de Ingeniería</a>
+<a class="hover:text-primary transition-colors" href="#">v1.0.4-RELEASE</a>
+</div>
+</footer>
 </main>
-<!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-[#1c1b1b]/90 backdrop-blur-xl no-border tonal-shift-top shadow-[0_-10px_30px_rgba(0,0,0,0.5)] rounded-t-[3rem] pb-safe">
-<div class="flex flex-col items-center justify-center text-[#e5e2e1]/40 transition-all scale-90 duration-150 ease-in-out active:bg-[#201f1f]">
-<span class="material-symbols-outlined">list_alt</span>
-<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter">Inventario</span>
+<!-- BottomNavBar (Móvil solamente) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 glass-header border-t border-outline-variant/10 flex justify-around items-center px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-red-500" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Inicio</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Stock</span>
+</a>
+<div class="relative -top-6">
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="qr_code_scanner">qr_code_scanner</span>
+</button>
 </div>
-<div class="flex flex-col items-center justify-center text-[#ffb3ac] bg-[#353534] rounded-full px-6 py-2 transition-all scale-90 duration-150 ease-in-out">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
-<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter">Escanear</span>
-</div>
-<div class="flex flex-col items-center justify-center text-[#e5e2e1]/40 transition-all scale-90 duration-150 ease-in-out active:bg-[#201f1f]">
-<span class="material-symbols-outlined">person</span>
-<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter">Perfil</span>
-</div>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Envíos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Ajustes</span>
+</a>
 </nav>
 </body></html>
