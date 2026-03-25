@@ -1,338 +1,252 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
+<html class="dark" lang="es-419"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GESTIÓN SEDE GALERÍAS ÁVILA</title>
+<title>FitShop Elite - Sede Galerías Ávila</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
             extend: {
               colors: {
-                "inverse-on-surface": "#313030",
+                "on-primary": "#51221e",
                 "surface-dim": "#131313",
-                "on-tertiary-container": "#7cb0c0",
-                "on-primary-fixed": "#40000b",
-                "secondary-fixed-dim": "#ffb3b5",
-                "on-primary": "#680018",
-                "outline": "#a78a8a",
-                "error-container": "#93000a",
-                "surface-tint": "#ffb3b5",
-                "surface-bright": "#3a3939",
-                "surface-container-highest": "#353534",
-                "on-tertiary-fixed": "#001f26",
-                "on-secondary-fixed": "#3b070e",
-                "primary-fixed-dim": "#ffb3b5",
-                "on-tertiary": "#003640",
+                "tertiary-fixed": "#bee9ff",
                 "inverse-surface": "#e5e2e1",
-                "surface-container-high": "#2a2a2a",
-                "on-background": "#e5e2e1",
-                "tertiary-fixed": "#b6ebfb",
-                "background": "#131313",
-                "on-secondary": "#571c22",
-                "error": "#ffb4ab",
-                "on-error": "#690005",
-                "secondary-container": "#743237",
-                "on-surface-variant": "#e0bfbf",
-                "outline-variant": "#584141",
-                "primary-container": "#800020",
-                "surface-container-low": "#1c1b1b",
-                "tertiary-container": "#004451",
-                "secondary": "#ffb3b5",
-                "on-primary-container": "#ff828a",
-                "on-surface": "#e5e2e1",
-                "primary": "#ffb3b5",
-                "surface": "#131313",
-                "inverse-primary": "#af2b3e",
-                "surface-container-lowest": "#0e0e0e",
-                "on-secondary-container": "#f69da0",
-                "tertiary-fixed-dim": "#9acfde",
+                "primary-container": "#9d5f5a",
+                "on-secondary-fixed-variant": "#930010",
                 "surface-container": "#201f1f",
-                "surface-variant": "#353534",
+                "on-primary-fixed": "#370d0b",
+                "on-secondary-fixed": "#410003",
+                "secondary": "#ffb3ac",
+                "on-tertiary-container": "#e9f7ff",
+                "on-surface": "#e5e2e1",
+                "tertiary-container": "#00799c",
+                "outline": "#ab8985",
+                "on-tertiary": "#003546",
+                "surface-container-lowest": "#0e0e0e",
+                "primary-fixed-dim": "#ffb3ac",
+                "inverse-primary": "#894e49",
+                "surface-container-low": "#1c1b1b",
+                "tertiary-fixed-dim": "#7bd1f8",
                 "on-error-container": "#ffdad6",
-                "primary-fixed": "#ffdada",
-                "tertiary": "#9acfde",
-                "secondary-fixed": "#ffdada"
+                "surface-container-highest": "#353534",
+                "on-surface-variant": "#e4beba",
+                "secondary-container": "#a40213",
+                "error-container": "#93000a",
+                "on-tertiary-fixed": "#001f2a",
+                "surface-bright": "#393939",
+                "on-primary-container": "#fff2f0",
+                "secondary-fixed-dim": "#ffb3ac",
+                "inverse-on-surface": "#313030",
+                "primary": "#ffb3ac",
+                "on-secondary": "#680008",
+                "on-error": "#690005",
+                "surface-tint": "#ffb3ac",
+                "on-background": "#e5e2e1",
+                "surface-variant": "#353534",
+                "error": "#ffb4ab",
+                "tertiary": "#7bd1f8",
+                "surface-container-high": "#2a2a2a",
+                "primary-fixed": "#ffdad6",
+                "outline-variant": "#5b403d",
+                "on-tertiary-fixed-variant": "#004d65",
+                "on-primary-fixed-variant": "#6d3733",
+                "background": "#131313",
+                "secondary-fixed": "#ffdad6",
+                "on-secondary-container": "#ffaea6",
+                "surface": "#131313"
               },
               fontFamily: {
                 "headline": ["Space Grotesk"],
                 "body": ["Inter"],
                 "label": ["Inter"]
               },
-              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
             },
           },
         }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .technical-grid {
-            background-image: linear-gradient(to right, #584141 1px, transparent 1px), linear-gradient(to bottom, #584141 1px, transparent 1px);
-            background-size: 24px 24px;
-            opacity: 0.05;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+      </script>
 </head>
-<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- NAVIGATION SHELL: SideNav (Web) -->
-<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 h-full w-72 border-r border-[#3a3939]/15 bg-[#131313]">
-<div class="p-6 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="factory">factory</span>
-<span class="text-[#800020] font-black italic font-headline tracking-tighter">FITSHOP_IMS</span>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-[#131313] h-screen w-64 hidden md:flex left-0 border-r-0 z-50 tonal-layering bg-[#1c1b1b] shadow-[20px_0_40px_rgba(211,47,47,0.02)]">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-black text-[#e5e2e1] mb-2 font-headline uppercase tracking-tighter">FitShop Elite</h1>
+<p class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-on-surface-variant">Gestión de Activos</p>
 </div>
-<div class="px-6 py-4 mb-6">
-<div class="flex items-center gap-3 p-3 bg-surface-container-high rounded-lg border-l-4 border-primary-container">
-<div class="w-10 h-10 rounded-sm bg-surface-variant flex items-center justify-center overflow-hidden">
-<img alt="Avatar del Operador" class="object-cover w-full h-full" data-alt="Close up portrait of a professional warehouse operator wearing a tactical headset and dark uniform in a dimly lit industrial setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyj3SfDMJr4_pWdN0M0mfBnUl2UO0TDIaEk5Pgm6SfDVMdPUFY2vzZxUQaZPpy8AmcWnFXOJ0RcwTGOSJf7ZfJTlG-7_wCrzqlFhAAgLYtknad8bV1dXOEoPWOZj-pvpgaFc27t6lDjRnYPqxj33bAkhJRXEj7UhULPCezyrQagC1s5_gZDbHU7UqsH-SHo2M9wd3yFXGL-bN8eCC5cN96T4XpZzpXOYJSAGweqzVHSrHyFxT3ghKb7LYY0uWt-4WC8cTkAWMePNB2"/>
-</div>
-<div>
-<div class="text-[#ffb3b5] font-headline font-bold text-xs tracking-widest uppercase">OPERADOR_082</div>
-<div class="text-on-surface-variant text-[10px] uppercase">Sector 7G - Nivel Aut. 4</div>
-</div>
-</div>
-</div>
-<nav class="flex-1">
-<a class="text-on-surface/70 px-6 py-4 flex items-center gap-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Panel Control
-            </a>
-<a class="bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 flex items-center gap-4 transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Inventario
-            </a>
-<a class="text-on-surface/70 px-6 py-4 flex items-center gap-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span> Escanear
-            </a>
-<a class="text-on-surface/70 px-6 py-4 flex items-center gap-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 font-headline uppercase text-sm tracking-tighter" href="#">
-<span class="material-symbols-outlined" data-icon="settings">settings</span> Configuración
-            </a>
+<nav class="flex-1 space-y-2 px-2">
+<!-- Navigation Items Mapping -->
+<a class="text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Inventario</span>
+</a>
+<!-- Active State: Tiendas / Sedes -->
+<a class="bg-gradient-to-r from-[#d32f2f] to-[#9d5f5a] text-white rounded-full mx-2 px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span>Tiendas</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span>Escáner</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span>Registro</span>
+</a>
 </nav>
-<div class="p-6">
-<div class="text-[10px] text-primary tracking-[0.2em] font-bold uppercase">SESIÓN_ACTIVA</div>
-<div class="mt-2 h-1 w-full bg-surface-container-highest overflow-hidden">
-<div class="h-full bg-primary w-2/3"></div>
+<div class="mt-auto px-4 space-y-2 pt-8 border-t border-outline-variant/10">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-4 rounded-full flex items-center justify-center gap-2 hover:brightness-110 transition-all active:scale-95 shadow-[0_10px_20px_rgba(211,47,47,0.15)]">
+<span class="material-symbols-outlined">center_focus_strong</span>
+<span>ESCANEAR SKU</span>
+</button>
+<div class="pt-6">
+<a class="text-[#e5e2e1]/70 hover:text-[#e5e2e1] px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configuración</span>
+</a>
+<a class="text-error/70 hover:text-error px-4 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-[#201f1f] rounded-full mx-2 transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Cerrar Sesión</span>
+</a>
 </div>
 </div>
 </aside>
-<!-- NAVIGATION SHELL: TopAppBar (Mobile/Global) -->
-<header class="fixed top-0 w-full z-50 bg-[#131313] flex justify-between items-center px-6 h-16 w-full max-w-none lg:pl-80">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 h-16 bg-[#131313]/70 backdrop-blur-md docked full-width top-0 z-40 no-line-rule tonal-shift bg-[#1c1b1b] md:pl-72">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#ffb3b5]" data-icon="factory">factory</span>
-<h1 class="text-lg font-black text-[#e5e2e1] tracking-widest font-headline uppercase">GESTIÓN SEDE GALERÍAS ÁVILA</h1>
+<span class="text-2xl font-black tracking-tighter text-[#e5e2e1] uppercase font-headline">FitShop</span>
+<div class="hidden md:block h-6 w-[1px] bg-outline-variant/30"></div>
+<span class="hidden md:block text-sm font-headline tracking-widest text-on-surface-variant uppercase">Sede Galerías Ávila</span>
 </div>
-<div class="flex items-center gap-2">
-<button class="p-2 text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors active:scale-95 duration-100">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<button class="p-2 text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors active:scale-95 duration-100 lg:hidden">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none text-xs focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 w-48" placeholder="Buscar activos..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#e5e2e1]/60 hover:bg-[#353534] p-2 rounded-full transition-colors">notifications</button>
+<div class="h-8 w-8 rounded-full bg-primary-container flex items-center justify-center text-xs font-bold text-on-primary-container overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="close-up studio portrait of a confident male gym manager with short hair wearing a black athletic polo shirt with neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAz3sE5LVBCuyU-DAJX2fS3-2eJ1Vfno9QL2IxZ2JSg9VvEi6RVjX569ET7Ptg3KNMVfvhc_q3SHVNznSyVoI0W313yULBUlVZjlZ1o7TuVrF2dqWUZbs3oU3kqtHOI4EarjzIDwa6Xe6CjxMEChYHv1UEAWWbgUrLqgMqbKBUbVeKgRsG06dSVDNRbppGmSuuYQOM0rdxvpwI1B6g_e2_7-YXbYLFj7Df93Y93Vgo0C1J0sZs0oZoaKEKcg81lDTqYKXZ-ski7Drc"/>
+</div>
+</div>
 </div>
 </header>
-<!-- MAIN CONTENT AREA -->
-<main class="min-h-screen pt-20 pb-24 lg:pl-72 bg-surface-dim relative overflow-x-hidden">
-<div class="absolute inset-0 technical-grid pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-6 relative z-10">
-<!-- NODE METRICS: ASYMMETRIC GRID -->
-<section class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
-<!-- Stock Count -->
-<div class="md:col-span-4 bg-surface-container-low p-6 flex flex-col justify-between group transition-all duration-300">
-<div class="flex justify-between items-start">
-<span class="text-on-surface-variant font-headline text-xs tracking-widest uppercase">Stock Total</span>
-<span class="material-symbols-outlined text-primary" data-icon="inventory">inventory</span>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 px-6 pb-24 min-h-screen">
+<!-- Hero Header Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-5xl md:text-7xl font-black font-headline tracking-tighter text-[#e5e2e1] uppercase">Sede Galerías Ávila</h2>
+<p class="mt-4 text-on-surface-variant font-medium tracking-tight max-w-2xl">Módulo de administración centralizada de inventario. Control total de existencias, auditorías y movimientos de stock para la sucursal Galerías.</p>
 </div>
-<div class="mt-4">
-<div class="text-4xl font-headline font-bold text-on-surface">14,202</div>
-<div class="flex items-center gap-2 text-tertiary text-xs mt-1">
-<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
-<span>+4.2% VS ÚLTIMA_SINCRONIZACIÓN</span>
-</div>
-</div>
-</div>
-<!-- Node Value -->
-<div class="md:col-span-5 bg-surface-container p-6 relative overflow-hidden group">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 blur-3xl -mr-16 -mt-16 group-hover:bg-primary-container/20 transition-all"></div>
-<div class="flex justify-between items-start relative z-10">
-<span class="text-on-surface-variant font-headline text-xs tracking-widest uppercase">Valoración de Sede</span>
-<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
-</div>
-<div class="mt-4 relative z-10">
-<div class="text-4xl font-headline font-bold text-on-surface">$128,450.00</div>
-<div class="text-on-surface-variant text-[10px] font-mono mt-2">UUID: AVILA_7721_NODE_X</div>
-</div>
-</div>
-<!-- Alerts -->
-<div class="md:col-span-3 bg-primary-container p-6 flex flex-col justify-between border-t-2 border-primary">
-<div class="flex justify-between items-start">
-<span class="text-on-primary-container font-headline text-xs tracking-widest uppercase">Alertas Críticas</span>
-<span class="material-symbols-outlined text-on-primary-container" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
-</div>
-<div class="mt-4">
-<div class="text-4xl font-headline font-bold text-on-primary-container">03</div>
-<div class="text-on-primary-container/80 text-[10px] uppercase mt-2 font-bold">Acción Requerida Inmediata</div>
+<div class="flex flex-wrap gap-3">
+<button class="bg-surface-container-highest text-on-surface px-6 py-3 rounded-full text-sm font-headline font-bold uppercase tracking-widest hover:bg-surface-bright transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Descargar PDF</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-6 py-3 rounded-full text-sm font-headline font-bold uppercase tracking-widest hover:bg-surface-bright transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">grid_on</span>
+<span>Exportar Excel</span>
+</button>
 </div>
 </div>
 </section>
-<!-- REPORTING ACTIONS -->
-<div class="flex flex-wrap gap-3 mb-6">
-<button class="bg-primary-container text-on-primary-container px-4 py-2 flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-wider hover:bg-on-primary transition-all active:scale-95 border-t border-primary-fixed/10">
-<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
-                    REPORTE SEDE PDF
-                </button>
-<button class="bg-surface-container-high border border-outline-variant/20 text-on-surface px-4 py-2 flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-wider hover:bg-surface-bright transition-all active:scale-95">
-<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
-                    EXPORTAR CSV/EXCEL
-                </button>
-<div class="flex-1"></div>
-<div class="hidden md:flex items-center gap-4 bg-surface-container px-4 py-2 border-l-2 border-tertiary">
-<span class="text-[10px] font-headline text-tertiary uppercase tracking-tighter">Estado</span>
-<span class="text-[10px] font-bold text-on-surface">EN LÍNEA / SYNC_OK</span>
+<!-- KPI Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between h-48 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 text-primary opacity-5 transform rotate-12 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">inventory</span>
 </div>
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant">Productos Totales</span>
+<span class="text-6xl font-black font-headline tracking-tighter text-on-surface">0</span>
 </div>
-<!-- INVENTORY LIST: DATAGRID -->
-<div class="bg-surface-container-low overflow-hidden">
-<div class="p-4 border-b border-outline-variant/10 flex justify-between items-center bg-surface-container-lowest">
-<div class="relative w-full max-md">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
-<input class="w-full bg-surface-container-high border-none pl-10 text-sm focus:ring-0 placeholder:text-on-surface-variant/40 rounded-sm" placeholder="Filtrar por SKU o Nombre..." type="text"/>
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between h-48">
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant">Valorización Stock</span>
+<span class="text-5xl font-black font-headline tracking-tighter text-on-surface">$0.00</span>
 </div>
-<button class="ml-4 p-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between h-48 border-l-4 border-primary">
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant">Alertas de Stock</span>
+<span class="text-6xl font-black font-headline tracking-tighter text-primary">0</span>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between h-48">
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.2em] text-on-surface-variant">Último Movimiento</span>
+<span class="text-sm font-bold font-headline uppercase text-on-surface-variant italic">Sin Actividad</span>
+</div>
+</section>
+<!-- Empty State Container -->
+<section class="bg-surface-container-low rounded-lg p-12 md:p-24 border border-outline-variant/5">
+<div class="max-w-xl mx-auto text-center flex flex-col items-center">
+<div class="w-32 h-32 rounded-full bg-surface-container flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/10 animate-pulse rounded-full"></div>
+<span class="material-symbols-outlined text-primary text-5xl">inventory_2</span>
+</div>
+<h3 class="text-3xl font-black font-headline uppercase tracking-tighter mb-4">No hay productos registrados</h3>
+<p class="text-on-surface-variant text-lg mb-12">La base de datos de la Sede Galerías Ávila se encuentra vacía. Inicie la carga de inventario utilizando las herramientas de registro manual o escaneo de SKUs.</p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-5 rounded-full font-headline font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:scale-105 transition-transform shadow-xl">
+<span class="material-symbols-outlined">center_focus_strong</span>
+<span>Escanear Nuevo Item</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-5 rounded-full font-headline font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined">edit_document</span>
+<span>Cargar Producto Manual</span>
 </button>
 </div>
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-high/50">
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Imagen</th>
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">SKU / Serial</th>
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Nombre Producto</th>
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant text-right">Existencias</th>
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant text-right">Precio Unitario</th>
-<th class="px-6 py-4 font-headline text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Estado</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant/10">
-<!-- Item 1 -->
-<tr class="hover:bg-surface-container transition-colors group">
-<td class="px-6 py-4">
-<div class="w-12 h-12 bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/10">
-<img alt="Set de mancuernas" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern high-grade steel dumbbell set on a dark textured rack in a minimalist professional gym with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTFtr8wym0jLF68Ul-XKU1oK5rlqyoP0kDLT7nAvCeanNgujgK4fzWyo2VftV1o8ktTBBdfNR1Bm3FbMDYiZUXfwjSmJaiZEVLZQTWsdikWZFSgrhGqYJ6YNJlqEvRVxP3J9-wwv5EhCfb6oFMj_bD-Es3sKazJ7yg3vOXHKTPfoiUGyMyIUTthgXEiLRP9DrYnKF0P6fLdbJ3d8c5geVnW4wVkCVBp2kBBcg3gIJGGINi0Vjo7C-YsKqydcxm06Z0zkm4IBW4uuum"/>
 </div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-headline font-bold text-primary">HEX-DB-25KG</div>
-<div class="text-[10px] text-on-surface-variant">LN_9921_X01</div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-medium">Mancuerna Hexagonal Pro</div>
-<div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Equipamiento Fuerza / Negro</div>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="text-sm font-bold">42</div>
-<div class="w-full bg-surface-container-highest h-1 mt-1">
-<div class="bg-tertiary h-full" style="width: 80%;"></div>
+</section>
+<!-- Dynamic Filter Bar (Decorative Placeholder) -->
+<div class="mt-12 flex items-center justify-between border-b border-outline-variant/10 pb-6">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<button class="text-primary font-headline font-bold uppercase tracking-widest text-xs border-b-2 border-primary pb-2">Todos los activos</button>
+<button class="text-on-surface-variant/40 font-headline font-bold uppercase tracking-widest text-xs pb-2">Proteínas</button>
+<button class="text-on-surface-variant/40 font-headline font-bold uppercase tracking-widest text-xs pb-2">Accesorios</button>
+<button class="text-on-surface-variant/40 font-headline font-bold uppercase tracking-widest text-xs pb-2">Equipamiento</button>
 </div>
-</td>
-<td class="px-6 py-4 text-right font-headline text-sm">$89.90</td>
-<td class="px-6 py-4">
-<span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter bg-tertiary-container/30 text-tertiary border border-tertiary/20">
-                                        Óptimo
-                                    </span>
-</td>
-</tr>
-<!-- Item 2 -->
-<tr class="hover:bg-surface-container transition-colors group">
-<td class="px-6 py-4">
-<div class="w-12 h-12 bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/10">
-<img alt="Cinta de correr" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Sleek high-tech treadmill with glowing LED console display in a modern dark-themed industrial gym environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjSdYnB1LvEJBYPG2fgirmhnf5qDKxTm7w3_-xdi5V3xPIHIO95SmziKvbLAumQjMtHmumJ6XGi_zN8P9li2aq-h4gFayfM8FVVpbMtqWW0ijFqYoTEQvohCq0_CntxG629xfKhk1T2fX4JvUF--C-rxRK_qzu2KTgUtI0ZKMT-IvQ3a1GmhIUDVwZqFaeprHM40IEt0ubfwEdLuAG2X96-QMyNqSfJkgiX3fcjWYR2lbwFGENcjLWix4CXk7cLPWMZqsYEdTpyXg"/>
-</div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-headline font-bold text-primary">CRD-TR-V4</div>
-<div class="text-[10px] text-on-surface-variant">LN_4410_B12</div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-medium">Cinta de Correr V4-Elite</div>
-<div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Cardio / Electrónico</div>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="text-sm font-bold">04</div>
-<div class="w-full bg-surface-container-highest h-1 mt-1">
-<div class="bg-error h-full" style="width: 15%;"></div>
-</div>
-</td>
-<td class="px-6 py-4 text-right font-headline text-sm">$1,250.00</td>
-<td class="px-6 py-4">
-<span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter bg-error-container/30 text-error border border-error/20">
-                                        Stock Bajo
-                                    </span>
-</td>
-</tr>
-<!-- Item 3 -->
-<tr class="hover:bg-surface-container transition-colors group">
-<td class="px-6 py-4">
-<div class="w-12 h-12 bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/10">
-<img alt="Bote Proteína" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Matte black protein powder tub with minimalist silver typography on a clean industrial metal shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqk3CxrPdtCLL6O0pcIBI7QDKk7Uc7nfUl8YwyB5VBhnQnns_y4xXRDuszsspNDOEXZ4OLY65DaylOpq3JDaysDJ3KzIuIKUN2Gm-7i1xJxR7CJz4LuK3bqFF6GDA6oXFDEJP9XPapqAN4EsK6XcY0Dhj1rImZx-O-UJab_ILDe_NkqDpGU1Pyjr8joCLgrFdoyc45xIm4zvYc0u2QWzIMlVJmmFX3c_yDVuoefsEENB43YVFbLizo21SCmcp83wg4l-4hELLJHljS"/>
-</div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-headline font-bold text-primary">SUP-WH-5LB</div>
-<div class="text-[10px] text-on-surface-variant">LN_8850_X99</div>
-</td>
-<td class="px-6 py-4">
-<div class="text-sm font-medium">Proteína Whey Isolate 5lb</div>
-<div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Suplementos / Alimentación</div>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="text-sm font-bold">156</div>
-<div class="w-full bg-surface-container-highest h-1 mt-1">
-<div class="bg-tertiary h-full" style="width: 95%;"></div>
-</div>
-</td>
-<td class="px-6 py-4 text-right font-headline text-sm">$64.50</td>
-<td class="px-6 py-4">
-<span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter bg-tertiary-container/30 text-tertiary border border-tertiary/20">
-                                        Óptimo
-                                    </span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="p-4 bg-surface-container-highest flex justify-between items-center text-[10px] font-headline uppercase tracking-widest text-on-surface-variant/60">
-<span>Mostrando 3 de 1,240 registros</span>
-<div class="flex gap-4">
-<button class="hover:text-primary transition-colors">Anterior</button>
-<button class="hover:text-primary transition-colors text-primary font-bold">1</button>
-<button class="hover:text-primary transition-colors">2</button>
-<button class="hover:text-primary transition-colors">3</button>
-<button class="hover:text-primary transition-colors">Siguiente</button>
-</div>
-</div>
-</div>
-<!-- SCAN OVERLAY SIMULATOR BUTTON (MOBILE ONLY VISUAL) -->
-<div class="mt-8 md:hidden">
-<button class="w-full bg-tertiary text-on-tertiary-fixed h-16 flex items-center justify-center gap-3 font-headline font-bold uppercase tracking-[0.2em] rounded-sm active:scale-95 transition-transform">
-<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
-                    Lanzar Escáner Sede
-                </button>
+<div class="flex items-center gap-4 text-on-surface-variant/40 text-xs font-bold uppercase font-headline">
+<span>Orden: Recientes</span>
+<span class="material-symbols-outlined text-sm">filter_list</span>
 </div>
 </div>
 </main>
-<!-- NAVIGATION SHELL: BottomNavBar (Mobile) -->
-<footer class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
-<div class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] active:scale-90 transition-all duration-200">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Panel</span>
-</div>
-<div class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-transform active:scale-90
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-[#1c1b1b]/90 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<button class="flex flex-col items-center justify-center text-[#e5e2e1]/40 scale-90 duration-150 ease-in-out active:bg-[#201f1f] py-2 px-4 rounded-full">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter mt-1">Inventario</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#ffb3ac] bg-[#353534] rounded-full px-6 py-2 scale-90 duration-150 ease-in-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter mt-1">Escanear</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#e5e2e1]/40 scale-90 duration-150 ease-in-out active:bg-[#201f1f] py-2 px-4 rounded-full">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-tighter mt-1">Perfil</span>
+</button>
+</nav>
+<!-- FAB for quick action (Suppressed as per rules on detail/sub-pages, but kept if considered main view) -->
+<!-- Suppressed: Sede Galerías Ávila is considered a focused sub-entity view -->
+</body></html>
