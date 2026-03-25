@@ -3,249 +3,215 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="noindex, nofollow" name="robots"/>
-<title>FitShop | Acceso Maestro</title>
+<title>FITSHOP - GESTIÓN DE ACTIVOS</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-tint": "#ffb3b5",
-                        "tertiary-container": "#004451",
-                        "surface-bright": "#37393b",
-                        "on-tertiary-container": "#7cb0c0",
-                        "on-tertiary": "#003640",
-                        "surface-container-high": "#282a2c",
-                        "inverse-surface": "#e2e2e5",
-                        "primary-container": "#800020",
-                        "on-surface": "#e2e2e5",
-                        "on-primary-fixed-variant": "#8e0f28",
-                        "on-secondary-fixed": "#3b070e",
-                        "tertiary-fixed": "#b6ebfb",
-                        "surface-container": "#1e2022",
-                        "on-secondary-fixed-variant": "#743237",
-                        "tertiary-fixed-dim": "#9acfde",
-                        "surface-dim": "#121416",
-                        "on-error-container": "#ffdad6",
-                        "primary-fixed": "#ffdada",
-                        "on-background": "#e2e2e5",
-                        "surface-variant": "#333537",
-                        "on-tertiary-fixed-variant": "#114d5b",
-                        "on-tertiary-fixed": "#001f26",
-                        "primary": "#ffb3b5",
-                        "background": "#121416",
-                        "error-container": "#93000a",
-                        "on-secondary-container": "#f69da0",
-                        "error": "#ffb4ab",
-                        "secondary-fixed": "#ffdada",
-                        "surface-container-low": "#1a1c1e",
-                        "on-error": "#690005",
-                        "secondary-container": "#743237",
-                        "on-secondary": "#571c22",
-                        "tertiary": "#9acfde",
-                        "surface": "#121416",
-                        "outline": "#a78a8a",
-                        "primary-fixed-dim": "#ffb3b5",
-                        "on-primary-container": "#ff828a",
-                        "inverse-primary": "#af2b3e",
-                        "secondary": "#ffb3b5",
-                        "on-surface-variant": "#e0bfbf",
-                        "on-primary": "#680018",
-                        "surface-container-highest": "#333537",
-                        "outline-variant": "#584141",
-                        "secondary-fixed-dim": "#ffb3b5",
-                        "surface-container-lowest": "#0c0e10",
-                        "on-primary-fixed": "#40000b",
-                        "inverse-on-surface": "#2f3133"
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk"],
-                        "body": ["Manrope"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#7cb0c0",
+              "on-primary-fixed": "#40000b",
+              "secondary-fixed-dim": "#ffb3b5",
+              "on-primary": "#680018",
+              "outline": "#a78a8a",
+              "error-container": "#93000a",
+              "surface-tint": "#ffb3b5",
+              "surface-bright": "#3a3939",
+              "surface-container-highest": "#353534",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed": "#3b070e",
+              "primary-fixed-dim": "#ffb3b5",
+              "on-tertiary": "#003640",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed": "#b6ebfb",
+              "background": "#131313",
+              "on-secondary": "#571c22",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#114d5b",
+              "on-error": "#690005",
+              "secondary-container": "#743237",
+              "on-surface-variant": "#e0bfbf",
+              "outline-variant": "#584141",
+              "on-primary-fixed-variant": "#8e0f28",
+              "primary-container": "#800020",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-container": "#004451",
+              "secondary": "#ffb3b5",
+              "on-primary-container": "#ff828a",
+              "on-surface": "#e5e2e1",
+              "primary": "#ffb3b5",
+              "on-secondary-fixed-variant": "#743237",
+              "surface": "#131313",
+              "inverse-primary": "#af2b3e",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-container": "#f69da0",
+              "tertiary-fixed-dim": "#9acfde",
+              "surface-container": "#201f1f",
+              "surface-variant": "#353534",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffdada",
+              "tertiary": "#9acfde",
+              "secondary-fixed": "#ffdada"
             },
-        }
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #121416;
-            color: #e2e2e5;
-            font-family: 'Manrope', sans-serif;
-        }
-        .industrial-gradient {
-            background: linear-gradient(135deg, #800020 0%, #40000b 100%);
-        }
-        .glass-panel {
-            background: rgba(51, 53, 55, 0.8);
-            backdrop-filter: blur(20px);
-        }
-        .text-glow {
-            text-shadow: 0 0 15px rgba(255, 179, 181, 0.3);
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .security-grid {
+        background-image: linear-gradient(rgba(88, 65, 65, 0.05) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(88, 65, 65, 0.05) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .metal-sheen {
+        background: linear-gradient(45deg, #ffb3b5 0%, #800020 100%);
+      }
+    </style>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-4 selection:bg-primary-container selection:text-white">
-<main class="w-full max-w-[1200px] grid lg:grid-cols-2 gap-0 overflow-hidden rounded-lg shadow-2xl border border-outline-variant/10">
-<!-- Columna de Identidad Visual -->
-<div class="hidden lg:flex flex-col justify-between p-12 industrial-gradient relative overflow-hidden">
-<div class="z-10">
+<body class="bg-surface-dim text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- Fondo de Cuadrícula de Seguridad -->
+<div class="fixed inset-0 security-grid pointer-events-none z-0"></div>
+<!-- Contenedor Principal -->
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center p-6 sm:p-8">
+<!-- Encabezado de Marca -->
+<header class="mb-12 flex flex-col items-center text-center">
+<div class="mb-6 flex items-center justify-center">
+<div class="h-12 w-12 bg-primary-container flex items-center justify-center rounded-sm mr-4 shadow-[0_0_20px_rgba(128,0,32,0.3)] border border-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="font-headline font-black text-2xl tracking-[0.2em] text-on-surface leading-none">FITSHOP</span>
+<span class="font-headline text-[10px] tracking-[0.5em] text-primary uppercase font-bold mt-1">Gestión de Activos</span>
+</div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-black text-on-surface tracking-tighter mb-2">ACCESO MAESTRO</h1>
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="shield_person">shield_person</span>
-<h1 class="font-headline text-3xl font-extrabold tracking-tighter text-white">FitShop</h1>
+<div class="h-[1px] w-8 bg-outline-variant/30"></div>
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant font-medium">Protocolo de Autenticación Requerido</p>
+<div class="h-[1px] w-8 bg-outline-variant/30"></div>
 </div>
-<div class="mt-24">
-<h2 class="font-headline text-5xl font-bold leading-none tracking-tight text-white mb-6 uppercase">
-                    SISTEMA DE <br/>
-<span class="text-primary-fixed">GESTIÓN MAESTRA</span>
-</h2>
-<p class="font-body text-lg text-primary-fixed/70 max-w-md leading-relaxed">
-                    Control total de inventario, equipos y flujo operativo para todas las sedes nacionales de FitShop.
-                </p>
-</div>
-</div>
-<div class="z-10 flex gap-6 items-center text-sm font-label text-white/50">
-<span>Versión 2.4.0</span>
-<span class="w-1 h-1 rounded-full bg-white/20"></span>
-<span>Acceso Restringido</span>
-</div>
-<div class="absolute inset-0 opacity-40 mix-blend-overlay">
-<img alt="Gimnasio industrial profesional" class="w-full h-full object-cover" data-alt="High-end professional gym equipment background with plates and dumbbells in a dark moody setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfajjEr8gu6MFBgKdQnb7h-WbVor5uBchlJccB9RiWR7KW7Af8OM6SnXGonoQeuBAUNx3SLBjkJvZCs3q03UwpF5sj6aVhCdk3D4Q7T1RTRCWSuwb9gIJjfFEQ7NMsy7Ipi1ARpEoIAXzv7fmYha420vqJ--0QqtIRePeghGIlO9clRaQEDvPbaAEmq8PQ78AkBH5i0ROvDrXmSlCZDQHhmC4AVxRmmvL85Rmy8f45XqIdR9rqUf2Beow0N2QTkiDWz3rutOJy9f12"/>
-</div>
-</div>
-<!-- Columna de Formulario -->
-<div class="bg-surface-container-low p-8 lg:p-16 flex flex-col justify-center">
-<div class="lg:hidden flex flex-col items-center mb-12">
-<span class="material-symbols-outlined text-5xl text-primary-container mb-2" data-icon="fitness_center">fitness_center</span>
-<h1 class="font-headline text-2xl font-bold tracking-tight text-primary-container">FitShop</h1>
-<p class="font-label text-xs uppercase tracking-widest text-outline">Acceso Maestro</p>
-</div>
-<div class="max-w-md mx-auto w-full">
-<header class="mb-10">
-<h3 class="font-headline text-2xl font-semibold text-on-surface mb-2">Iniciar Sesión</h3>
-<p class="font-body text-on-surface-variant text-sm">Ingrese sus credenciales de administrador para continuar.</p>
 </header>
-<form class="space-y-6" id="loginForm">
-<!-- Selector de Sede -->
+<!-- Contenedor de Inicio de Sesión -->
+<section class="w-full max-w-md">
+<div class="bg-surface-container border-l-4 border-primary-container p-8 shadow-2xl relative overflow-hidden">
+<!-- Decoración Visual -->
+<div class="absolute top-0 right-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<form class="space-y-6 relative z-10">
+<!-- Campo ID de Operador -->
 <div class="space-y-2">
-<label class="font-label text-xs uppercase tracking-widest text-outline pl-1">Sede de Operación</label>
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="location_on">location_on</span>
-<select class="w-full bg-surface-container-high border-b-2 border-outline-variant focus:border-primary-container text-on-surface py-4 pl-12 pr-4 font-body outline-none appearance-none transition-all cursor-pointer" id="branch" required="">
-<option disabled="" selected="" value="">Seleccione una sede</option>
-<option value="global">Vista Global (Corporativo)</option>
-<option value="san-luis">Sede San Luis</option>
-<option value="san-ignacio">Sede San Ignacio</option>
-<option value="milenium">Sede Milenium</option>
-<option value="galerias-avila">Sede Galerías Ávila</option>
-</select>
-<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
-</div>
-</div>
-<!-- Usuario -->
-<div class="space-y-2">
-<label class="font-label text-xs uppercase tracking-widest text-outline pl-1" for="username">Identificador de Usuario</label>
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="person">person</span>
-<input class="w-full bg-surface-container-high border-b-2 border-outline-variant focus:border-primary-container text-on-surface py-4 pl-12 pr-4 font-body outline-none transition-all placeholder:text-outline/50" id="username" placeholder="Nombre de usuario" required="" type="text"/>
-</div>
-</div>
-<!-- Contraseña -->
-<div class="space-y-2">
-<label class="font-label text-xs uppercase tracking-widest text-outline pl-1" for="password">Clave de Acceso</label>
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
-<input class="w-full bg-surface-container-high border-b-2 border-outline-variant focus:border-primary-container text-on-surface py-4 pl-12 pr-4 font-body outline-none transition-all placeholder:text-outline/50" id="password" placeholder="••••••••" required="" type="password"/>
-<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors" id="togglePassword" type="button">
-<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
-</button>
-</div>
-</div>
-<!-- Error Message -->
-<div class="hidden text-error text-xs font-label bg-error-container/20 p-3 rounded border border-error/20" id="errorMsg">
-                    Credenciales inválidas. Por favor intente de nuevo.
-                </div>
-<!-- Acciones -->
-<div class="pt-4 flex flex-col gap-4">
-<button class="industrial-gradient text-white font-headline font-bold py-5 px-8 rounded flex items-center justify-center gap-3 group active:scale-[0.98] transition-all shadow-xl shadow-primary-container/10" type="submit">
-                        INICIAR SESIÓN
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<div class="flex items-center justify-between px-1">
-<label class="flex items-center gap-2 cursor-pointer select-none">
-<input class="w-4 h-4 rounded-sm border-outline-variant bg-surface-container-high text-primary-container focus:ring-offset-background focus:ring-primary-container transition-all" type="checkbox"/>
-<span class="font-label text-xs text-on-surface-variant">Mantener sesión activa</span>
+<label class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface-variant flex justify-between">
+                            ID de Operador
+                            <span class="text-primary/50 text-[8px]">CAMPO_REQ_01</span>
 </label>
-<a class="font-label text-xs text-primary hover:text-on-primary-fixed-variant transition-colors" href="#">¿Olvidó su clave?</a>
+<div class="relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline group-focus-within:bg-primary transition-colors"></div>
+<input class="w-full bg-surface-container-high border-none py-4 pl-6 pr-4 text-on-surface font-headline tracking-widest placeholder:text-on-surface-variant/30 focus:ring-0 rounded-sm" placeholder="AUTH_ID_XXXX" type="text"/>
 </div>
+</div>
+<!-- Campo Clave Maestra -->
+<div class="space-y-2">
+<label class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface-variant flex justify-between">
+                            Clave Maestra
+                            <span class="text-primary/50 text-[8px]">LLAVE_SEG_02</span>
+</label>
+<div class="relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline group-focus-within:bg-primary transition-colors"></div>
+<input class="w-full bg-surface-container-high border-none py-4 pl-6 pr-4 text-on-surface font-headline tracking-widest placeholder:text-on-surface-variant/30 focus:ring-0 rounded-sm" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<!-- Desplegable de Nodo Operacional -->
+<div class="space-y-2">
+<label class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface-variant flex justify-between">
+                            Nodo Operacional
+                            <span class="text-primary/50 text-[8px]">NODO_LOC_03</span>
+</label>
+<div class="relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline group-focus-within:bg-primary transition-colors"></div>
+<select class="w-full bg-surface-container-high border-none py-4 pl-6 pr-10 text-on-surface font-label uppercase tracking-tighter focus:ring-0 rounded-sm appearance-none">
+<option>San Luis</option>
+<option>San Ignacio</option>
+<option>Milenium</option>
+<option>Ávila</option>
+<option>Sede Extra</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Botón de Acción -->
+<div class="pt-4">
+<button class="w-full py-5 metal-sheen text-on-primary-fixed font-headline font-black text-sm tracking-[0.25em] flex items-center justify-center gap-3 active:scale-[0.98] transition-all shadow-[0_8px_24px_rgba(128,0,32,0.2)] rounded-sm" type="submit">
+                            AUTENTICAR
+                            <span class="material-symbols-outlined text-lg">verified_user</span>
+</button>
 </div>
 </form>
-<footer class="mt-20 border-t border-outline-variant/10 pt-6">
-<p class="font-label text-[10px] text-center text-outline/60 uppercase tracking-widest leading-relaxed">
-                    Este es un sistema privado de FitShop. <br/>
-                    El acceso no autorizado será monitoreado y procesado legalmente.
+<!-- Texto de Seguridad -->
+<div class="mt-8 pt-6 border-t border-outline-variant/10 flex flex-col items-center text-center gap-2">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
+<span class="font-label text-[9px] uppercase tracking-tighter text-tertiary font-bold">Cifrado AES-256 Activo</span>
+</div>
+<p class="font-label text-[10px] text-on-surface-variant/60 font-medium">Protocolo FitShop-Secure V2.0.4</p>
+</div>
+</div>
+<!-- Tarjeta de Advertencia -->
+<div class="mt-6 flex gap-4 items-start p-4 bg-error-container/10 border-l-2 border-error-container">
+<span class="material-symbols-outlined text-error-container" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="font-label text-[11px] leading-relaxed text-on-surface-variant">
+<span class="text-error font-bold uppercase tracking-tight">Solo personal autorizado.</span> Se prohíbe el acceso de múltiples usuarios al mismo nodo. Todas las sesiones son monitoreadas.
                 </p>
+</div>
+</section>
+<!-- Pie de página / Información del Entorno -->
+<footer class="mt-auto pt-12 w-full max-w-4xl border-t border-outline-variant/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex gap-8">
+<div class="flex flex-col">
+<span class="text-[8px] uppercase font-black text-on-surface-variant tracking-[0.3em]">Estado</span>
+<span class="font-headline text-xs font-bold text-on-surface">SIS_LISTO</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[8px] uppercase font-black text-on-surface-variant tracking-[0.3em]">Región</span>
+<span class="font-headline text-xs font-bold text-on-surface">LATAM_SUR_01</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="px-3 py-1 bg-surface-container-highest rounded-sm border border-outline-variant/10">
+<span class="font-label text-[9px] text-on-surface-variant font-bold uppercase">Terminal: 082-A35</span>
+</div>
+</div>
 </footer>
-</div>
-</div>
 </main>
-<div class="fixed inset-0 -z-50 bg-surface">
-<div class="absolute inset-0 opacity-5 pointer-events-none">
-<svg class="w-full h-full" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
-<path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"></path>
-</pattern>
-</defs>
-<rect fill="url(#grid)" height="100%" width="100%"></rect>
-</svg>
+<!-- Elementos Visuales de Escaneo -->
+<div class="fixed top-0 left-0 w-full h-1 bg-tertiary/20 z-50"></div>
+<div class="fixed bottom-0 left-0 w-full h-1 bg-primary-container/20 z-50"></div>
+<div class="fixed top-0 left-0 h-full w-1 bg-outline-variant/5 z-50"></div>
+<div class="fixed top-0 right-0 h-full w-1 bg-outline-variant/5 z-50"></div>
+<!-- Imagen de Fondo con Textura -->
+<div class="fixed inset-0 -z-10 opacity-10">
+<img alt="Interior de almacén industrial oscuro con suelos de hormigón, techos altos y pilares estructurales rítmicos en una iluminación tenue atmosférica" class="w-full h-full object-cover grayscale brightness-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1WMsL-iTR92QVGNxC_x1DDbuJ32uGN7wKpuePw2yJjI6UVlKv3ZifUW49Mpqg6hTSx6nU2rFhysDELcNdidQjNVUe6yrccCiqYLpTWb3cRiacXxEH6dl4ytyUy8VcI1SbZrTmLH1RFa0xTIfYly8g0QbTc9p-zg0XAjkVBU7X9ReJ6h1mcXk-wexRv5qRlQJYV4Nl5PXnT99Z6UHoY8Flj9R7lkCe8D8H67vcuPnF7bgXYk3_x6xoAYV1pqfSYKQpzFevj1gRDnXr"/>
 </div>
-</div>
-<script>
-    // Obfuscated data for security
-    const _sec = {
-        k1: 'Rml0c2hvcCBNYWVzdHJv', // Fitshop Maestro
-        v1: 'Rml0c2hvcC1tYWVzdHJvMi4w', // Fitshop-maestro2.0
-        k2: 'YWRyZWFuc3Vhcg==', // adreansuar
-        v2: 'YWRtaW5kZWZpbml0aXZvMi4w' // admindefinitivo2.0
-    };
-
-    const toggleBtn = document.getElementById('togglePassword');
-    const passInput = document.getElementById('password');
-    const form = document.getElementById('loginForm');
-    const errorMsg = document.getElementById('errorMsg');
-
-    toggleBtn.addEventListener('click', () => {
-        const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passInput.setAttribute('type', type);
-        toggleBtn.querySelector('span').textContent = type === 'password' ? 'visibility' : 'visibility_off';
-    });
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const u = document.getElementById('username').value;
-        const p = passInput.value;
-        
-        const check = (val, encoded) => val === atob(encoded);
-
-        if ((check(u, _sec.k1) && check(p, _sec.v1)) || (check(u, _sec.k2) && check(p, _sec.v2))) {
-            // Success action
-            console.log('Access Granted');
-            // Mocking redirection
-            window.location.href = '#'; 
-            alert('Acceso concedido. Redirigiendo al panel de control...');
-        } else {
-            errorMsg.classList.remove('hidden');
-            setTimeout(() => errorMsg.classList.add('hidden'), 3000);
-        }
-    });
-</script>
 </body></html>
