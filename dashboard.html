@@ -3,369 +3,383 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PANEL GLOBAL - FitShop Dashboard</title>
+<title>FitShop - Dashboard Global</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "inverse-on-surface": "#313030",
-              "surface-dim": "#131313",
-              "on-tertiary-container": "#7cb0c0",
-              "on-primary-fixed": "#40000b",
-              "secondary-fixed-dim": "#ffb3b5",
-              "on-primary": "#680018",
-              "outline": "#a78a8a",
-              "error-container": "#93000a",
-              "surface-tint": "#ffb3b5",
-              "surface-bright": "#3a3939",
-              "surface-container-highest": "#353534",
-              "on-tertiary-fixed": "#001f26",
-              "on-secondary-fixed": "#3b070e",
-              "primary-fixed-dim": "#ffb3b5",
-              "on-tertiary": "#003640",
-              "inverse-surface": "#e5e2e1",
-              "surface-container-high": "#2a2a2a",
-              "on-background": "#e5e2e1",
-              "tertiary-fixed": "#b6ebfb",
-              "background": "#131313",
-              "on-secondary": "#571c22",
-              "error": "#ffb4ab",
-              "on-tertiary-fixed-variant": "#114d5b",
-              "on-error": "#690005",
-              "secondary-container": "#743237",
-              "on-surface-variant": "#e0bfbf",
-              "outline-variant": "#584141",
-              "on-primary-fixed-variant": "#8e0f28",
-              "primary-container": "#800020",
-              "surface-container-low": "#1c1b1b",
-              "tertiary-container": "#004451",
-              "secondary": "#ffb3b5",
-              "on-primary-container": "#ff828a",
-              "on-surface": "#e5e2e1",
-              "primary": "#ffb3b5",
-              "on-secondary-fixed-variant": "#743237",
-              "surface": "#131313",
-              "inverse-primary": "#af2b3e",
-              "surface-container-lowest": "#0e0e0e",
-              "on-secondary-container": "#f69da0",
-              "tertiary-fixed-dim": "#9acfde",
-              "surface-container": "#201f1f",
-              "surface-variant": "#353534",
-              "on-error-container": "#ffdad6",
-              "primary-fixed": "#ffdada",
-              "tertiary": "#9acfde",
-              "secondary-fixed": "#ffdada"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#6d3733",
+                        "outline": "#ab8985",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "secondary-fixed": "#ffdad6",
+                        "on-surface-variant": "#e4beba",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed": "#370d0b",
+                        "secondary-fixed-dim": "#ffb3ac",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#bee9ff",
+                        "on-secondary-fixed-variant": "#930010",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "tertiary": "#7bd1f8",
+                        "on-secondary-fixed": "#410003",
+                        "inverse-primary": "#894e49",
+                        "background": "#131313",
+                        "on-error": "#690005",
+                        "primary": "#ffb3ac",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#00799c",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#9d5f5a",
+                        "on-primary-container": "#fff2f0",
+                        "surface-container": "#201f1f",
+                        "secondary-container": "#a40213",
+                        "on-primary": "#51221e",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary": "#680008",
+                        "secondary": "#ffb3ac",
+                        "surface": "#131313",
+                        "outline-variant": "#5b403d",
+                        "on-tertiary-container": "#e9f7ff",
+                        "on-tertiary": "#003546",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "surface-tint": "#ffb3ac",
+                        "surface-dim": "#131313",
+                        "on-secondary-container": "#ffaea6"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
             },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
+        }
     </script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .grid-bg {
-        background-image: radial-gradient(circle, rgba(88, 65, 65, 0.1) 1px, transparent 1px);
-        background-size: 24px 24px;
-      }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .font-space { font-family: 'Space Grotesk', sans-serif; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container grid-bg">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-6 h-16 w-full max-w-none">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#ffb3b5] text-2xl" data-icon="factory">factory</span>
-<span class="text-lg font-black text-[#e5e2e1] tracking-widest font-['Space_Grotesk']">PANEL GLOBAL</span>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- SideNavBar Implementation -->
+<aside class="bg-[#1c1b1b] h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col z-40 shadow-2xl py-8">
+<div class="px-6 mb-10">
+<h1 class="text-[#ffb3ac] font-black font-space text-2xl tracking-tighter italic">FitShop Admin</h1>
+<p class="text-[#e5e2e1]/40 text-[10px] uppercase tracking-[0.2em] mt-1">Gestión Central</p>
 </div>
-<div class="flex items-center gap-6">
-<div class="hidden md:flex gap-4 font-['Space_Grotesk'] font-bold tracking-tight">
-<a class="text-[#ffb3b5] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Panel</a>
-<a class="text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Inventario</a>
-<a class="text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Nodos</a>
-</div>
-<button class="material-symbols-outlined text-[#ffb3b5] hover:bg-[#2a2a2a] transition-colors p-2 rounded-sm active:scale-95 duration-100" data-icon="notifications">notifications</button>
-</div>
-</nav>
-<!-- Side Navigation Drawer (Desktop) -->
-<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 bg-[#131313] dark:bg-[#131313] h-full w-72 border-r border-[#3a3939]/15">
-<div class="pt-24 px-6 pb-8 flex flex-col gap-1">
-<div class="flex items-center gap-4 mb-8 bg-[#201f1f] p-4 rounded-sm">
-<div class="w-12 h-12 bg-primary-container flex items-center justify-center rounded-sm overflow-hidden">
-<img alt="Operador" class="w-full h-full object-cover" data-alt="Close up of a gritty cybernetic operator avatar with high contrast lighting and metallic industrial elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkgheQ1TIt5-KE8ExlVgmNA5vqCpmJxuLj52lQDR5k83an60OWtqvoTKX8ZspqMA0FADTaGs1UY9hU7p618ZI85CxM0Hp7TDWd7QRrHxX80ZIjttHVR7NeHmgdKVqO10MQHI0hw3XP-jk5bT9jd6GZcE0Qj_QVJlZFMv-3mIJjMHyTB2xg5aRbkHJ02-35NR5aebXmG30Qs3ElBcZ0ETcqNmFgtbj1EZ3VBk-9_xWBoeVZTfx_V__fIzXX_CmPZdDF42Zmar6P4Qli"/>
-</div>
-<div>
-<div class="font-['Space_Grotesk'] font-black italic text-[#800020] text-sm tracking-tighter">OPERADOR_082</div>
-<div class="text-[10px] text-on-surface-variant uppercase tracking-widest">Sector 7G - Nivel Aut. 4</div>
-</div>
-</div>
-<nav class="flex flex-col font-['Space_Grotesk'] uppercase text-sm tracking-tighter">
-<a class="bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 flex items-center gap-3 transition-all duration-300 ease-in-out" href="#">
+<nav class="flex-1 space-y-2">
+<!-- Active Tab: Dashboard -->
+<a class="bg-gradient-to-r from-[#d32f2f] to-[#9d5f5a] text-white rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 active:scale-98 transition-all" href="#">
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-                    Panel de Control
-                </a>
-<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
+<span class="font-space text-sm uppercase tracking-widest font-bold">Dashboard</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-all" href="#">
 <span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
-                    Inventario
-                </a>
-<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
+<span class="font-space text-sm uppercase tracking-widest">Inventario</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-space text-sm uppercase tracking-widest">Sedes</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-all" href="#">
 <span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
-                    Escanear
-                </a>
-<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-                    Configuración
-                </a>
+<span class="font-space text-sm uppercase tracking-widest">Escáner</span>
+</a>
+<a class="text-[#e5e2e1]/70 hover:bg-[#201f1f] rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+<span class="font-space text-sm uppercase tracking-widest">Nueva Entrada</span>
+</a>
 </nav>
+<div class="px-4 mt-auto space-y-4">
+<button class="w-full py-4 bg-surface-container-highest hover:bg-surface-bright text-primary font-bold rounded-xl flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="text-xs uppercase tracking-widest">Exportar Catálogo PDF</span>
+</button>
+<div class="pt-4 border-t border-outline-variant/20">
+<a class="text-[#e5e2e1]/40 hover:text-white flex items-center gap-3 px-4 py-2 transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span class="text-xs uppercase tracking-widest">Configuración</span>
+</a>
+<a class="text-[#e5e2e1]/40 hover:text-error flex items-center gap-3 px-4 py-2 transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+<span class="text-xs uppercase tracking-widest">Cerrar Sesión</span>
+</a>
 </div>
-<div class="mt-auto p-6">
-<div class="text-[10px] text-on-surface-variant font-mono uppercase opacity-50">Sesión Activa: 0xFD342...</div>
 </div>
 </aside>
-<!-- Main Content -->
-<main class="lg:ml-72 pt-24 pb-32 px-6 max-w-7xl mx-auto">
-<!-- Dashboard Header & Reporting Actions -->
+<!-- TopNavBar for Mobile -->
+<header class="bg-[#131313]/70 backdrop-blur-md sticky top-0 z-50 lg:hidden flex justify-between items-center w-full px-6 py-4">
+<div class="text-2xl font-black italic tracking-tighter text-[#ffb3ac]">FitShop</div>
+<div class="flex items-center gap-4 text-[#e5e2e1]/60">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 p-6 md:p-10 mb-24 lg:mb-0">
+<!-- Header Section with Actions -->
 <header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
 <div>
-<h1 class="font-headline text-5xl font-black text-on-surface tracking-tighter uppercase mb-2">Panel Global <span class="text-primary">FitShop</span></h1>
-<p class="font-body text-on-surface-variant tracking-wide max-w-xl">Supervisión centralizada de existencias y telemetría de red. Datos en tiempo real de nodos logísticos.</p>
+<span class="text-primary font-space font-bold uppercase tracking-[0.3em] text-xs">Panel de Control</span>
+<h2 class="text-4xl md:text-5xl font-space font-black tracking-tighter mt-2">Dashboard Global</h2>
 </div>
-<div class="flex flex-wrap gap-3">
-<button class="bg-primary-container text-on-primary-container px-6 py-3 font-label text-xs font-bold uppercase tracking-widest rounded-sm border-t border-primary-fixed/10 hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
-                    GENERAR REPORTE PDF (CATÁLOGO)
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-6 py-3 rounded-full flex items-center gap-2 transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-xl" data-icon="table_view">table_view</span>
+                    Excel
                 </button>
-<button class="bg-surface-container-high text-on-surface border border-outline-variant/20 px-6 py-3 font-label text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-surface-bright active:scale-95 transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="table_view">table_view</span>
-                    EXPORTAR EXCEL
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full flex items-center gap-2 transition-all text-sm font-bold shadow-[0_10px_30px_rgba(255,179,172,0.15)]">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+                    Reporte PDF
                 </button>
 </div>
 </header>
-<!-- High-Level Overview Cards -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-<div class="bg-surface-container p-6 rounded-sm border-l-4 border-primary relative overflow-hidden">
-<div class="absolute top-0 right-0 p-2 opacity-5">
+<!-- KPI Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
 <span class="material-symbols-outlined text-8xl" data-icon="inventory">inventory</span>
 </div>
-<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Unidades Totales en Stock</div>
-<div class="font-headline text-4xl font-bold text-on-surface">148,290</div>
-<div class="mt-2 text-tertiary text-xs font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span> +12.4% DESDE ÚLTIMO CIERRE
-                </div>
-</div>
-<div class="bg-surface-container p-6 rounded-sm border-l-4 border-tertiary relative overflow-hidden">
-<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Nodos Activos</div>
-<div class="font-headline text-4xl font-bold text-on-surface">05<span class="text-tertiary text-2xl font-light">/05</span></div>
-<div class="mt-2 text-tertiary text-xs font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span> TODOS LOS SISTEMAS OPERATIVOS
-                </div>
-</div>
-<div class="bg-surface-container p-6 rounded-sm border-l-4 border-primary-container relative overflow-hidden">
-<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Valor Total del Inventario</div>
-<div class="font-headline text-4xl font-bold text-on-surface">$2.4M</div>
-<div class="mt-2 text-on-surface-variant text-xs font-mono uppercase">VALUACIÓN_BETA_V4</div>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold mb-1">Total Productos</p>
+<h3 class="text-5xl font-space font-bold tracking-tighter text-white">4,821</h3>
+<div class="mt-4 flex items-center gap-2 text-tertiary text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span>+12% este mes</span>
 </div>
 </div>
-<!-- Main Data Visualization -->
-<section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-<!-- Asymmetric Bento-style Chart Container -->
-<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-sm relative border border-outline-variant/10">
-<div class="flex justify-between items-start mb-8">
-<div>
-<h3 class="font-headline text-xl font-bold uppercase tracking-tight">Tendencia de Stock Agregado</h3>
-<p class="text-xs text-on-surface-variant font-label uppercase">Sumatoria de existencias por ciclo de 24h</p>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="location_on">location_on</span>
 </div>
-<div class="flex gap-2">
-<span class="bg-primary/20 text-primary px-2 py-1 text-[10px] font-bold uppercase rounded-sm">TELEMETRÍA EN VIVO</span>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold mb-1">Sedes Activas</p>
+<h3 class="text-5xl font-space font-bold tracking-tighter text-white">12</h3>
+<div class="mt-4 flex items-center gap-2 text-[#e5e2e1]/40 text-xs">
+<span>Operación 24/7</span>
 </div>
 </div>
-<!-- Mock Industrial Chart -->
-<div class="h-64 w-full flex items-end gap-1 overflow-hidden relative">
-<!-- Grid Lines -->
-<div class="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
-<div class="border-t border-on-surface-variant w-full"></div>
-<div class="border-t border-on-surface-variant w-full"></div>
-<div class="border-t border-on-surface-variant w-full"></div>
-<div class="border-t border-on-surface-variant w-full"></div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="payments">payments</span>
 </div>
-<!-- Bars -->
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[40%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[55%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[45%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[70%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[65%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[85%]"></div>
-<div class="flex-1 bg-primary-container hover:bg-primary transition-colors h-[92%] relative">
-<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary">MÁX</div>
-</div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[78%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[60%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[72%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[80%]"></div>
-<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[88%]"></div>
-</div>
-<div class="flex justify-between mt-4 text-[10px] font-mono text-on-surface-variant uppercase tracking-widest">
-<span>00:00 HRS</span>
-<span>Sincronización Global: 14:00 HRS (Activa)</span>
-<span>23:59 HRS</span>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold mb-1">Valor Total</p>
+<h3 class="text-5xl font-space font-bold tracking-tighter text-white">$1.2M</h3>
+<div class="mt-4 flex items-center gap-2 text-primary text-xs">
+<span>Valuación de Inventario</span>
 </div>
 </div>
-<!-- Side Metric / Tactical Focus -->
-<div class="bg-primary-container p-8 flex flex-col justify-between rounded-sm">
-<div>
-<span class="material-symbols-outlined text-4xl mb-4" data-icon="security">security</span>
-<h3 class="font-headline text-2xl font-bold leading-tight mb-2">INTEGRIDAD DE DATOS: 99.8%</h3>
-<p class="text-sm text-on-primary-container/80">Validación criptográfica exitosa en todos los nodos periféricos.</p>
+<!-- Metric 4 (Critical) -->
+<div class="bg-secondary-container/10 p-8 rounded-lg border border-secondary-container/20 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity text-error">
+<span class="material-symbols-outlined text-8xl" data-icon="warning">warning</span>
 </div>
-<div class="pt-8">
-<div class="h-1 w-full bg-on-primary/20 rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[99.8%]"></div>
-</div>
-<button class="mt-6 w-full py-4 border border-on-primary-container/30 text-xs font-bold uppercase tracking-widest hover:bg-on-primary/10 transition-colors">Ver Logs de Seguridad</button>
+<p class="text-error text-[10px] uppercase tracking-widest font-bold mb-1">Alertas Críticas</p>
+<h3 class="text-5xl font-space font-bold tracking-tighter text-error">28</h3>
+<div class="mt-4 flex items-center gap-2 text-error text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="error_outline">error_outline</span>
+<span>Stock bajo detectado</span>
 </div>
 </div>
 </section>
-<!-- Node Status List -->
-<section>
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-tertiary" data-icon="hub">hub</span>
-<h2 class="font-headline text-xl font-bold uppercase tracking-tighter">Estado de Nodos Operativos</h2>
-</div>
-<div class="bg-surface-container rounded-sm overflow-hidden">
-<!-- Node Row 1 -->
-<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
-<div class="flex items-center gap-4">
-<div class="w-2 h-10 bg-tertiary"></div>
+<!-- Dynamic Content Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Charts Section (Span 2) -->
+<section class="xl:col-span-2 space-y-8">
+<!-- Stock per Branch Chart Container -->
+<div class="bg-surface-container p-8 rounded-lg">
+<div class="flex items-center justify-between mb-10">
 <div>
-<div class="font-headline text-sm font-bold uppercase">NODO_ALFA_CENTRAL</div>
-<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-001-A</div>
+<h4 class="text-xl font-space font-bold">Niveles de Stock por Sede</h4>
+<p class="text-on-surface-variant text-sm mt-1">Distribución de unidades físicas</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase tracking-wider opacity-60">Capacidad Total</span>
 </div>
 </div>
-<div class="flex items-center gap-8">
-<div class="hidden md:block">
-<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
-<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
-<div class="bg-tertiary h-full w-[45%]"></div>
-</div>
-</div>
-<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
-<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
-<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
-</div>
-</div>
-</div>
-<!-- Node Row 2 -->
-<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
-<div class="flex items-center gap-4">
-<div class="w-2 h-10 bg-primary"></div>
+<!-- Asymmetric Bar Visualization -->
+<div class="space-y-6">
+<!-- Bar Item -->
 <div>
-<div class="font-headline text-sm font-bold uppercase">NODO_BETA_NORTE</div>
-<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-002-B</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold">Sede Central - Madrid</span>
+<span class="text-xs opacity-50">1,240 unid.</span>
+</div>
+<div class="h-4 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[85%] rounded-full"></div>
 </div>
 </div>
-<div class="flex items-center gap-8">
-<div class="hidden md:block">
-<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
-<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
-<div class="bg-primary h-full w-[82%]"></div>
-</div>
-</div>
-<div class="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-sm border border-primary/20">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
-<span class="text-[10px] font-bold uppercase tracking-tighter text-nowrap">Sincronizando</span>
-</div>
-</div>
-</div>
-<!-- Node Row 3 -->
-<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
-<div class="flex items-center gap-4">
-<div class="w-2 h-10 bg-tertiary"></div>
+<!-- Bar Item -->
 <div>
-<div class="font-headline text-sm font-bold uppercase">NODO_GAMMA_ESTE</div>
-<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-003-G</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold">FitShop Barcelona Nord</span>
+<span class="text-xs opacity-50">980 unid.</span>
+</div>
+<div class="h-4 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[65%] rounded-full"></div>
 </div>
 </div>
-<div class="flex items-center gap-8">
-<div class="hidden md:block">
-<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
-<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
-<div class="bg-tertiary h-full w-[12%]"></div>
-</div>
-</div>
-<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
-<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
-<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
-</div>
-</div>
-</div>
-<!-- Node Row 4 -->
-<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
-<div class="flex items-center gap-4">
-<div class="w-2 h-10 bg-tertiary"></div>
+<!-- Bar Item -->
 <div>
-<div class="font-headline text-sm font-bold uppercase">NODO_DELTA_SUR</div>
-<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-004-D</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold">Outlet Valencia</span>
+<span class="text-xs opacity-50">1,500 unid.</span>
+</div>
+<div class="h-4 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[95%] rounded-full"></div>
 </div>
 </div>
-<div class="flex items-center gap-8">
-<div class="hidden md:block">
-<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
-<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
-<div class="bg-tertiary h-full w-[29%]"></div>
-</div>
-</div>
-<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
-<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
-<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
-</div>
-</div>
-</div>
-<!-- Node Row 5 -->
-<div class="flex items-center justify-between p-5 hover:bg-surface-bright transition-colors">
-<div class="flex items-center gap-4">
-<div class="w-2 h-10 bg-tertiary"></div>
+<!-- Bar Item -->
 <div>
-<div class="font-headline text-sm font-bold uppercase">NODO_EPSILON_OESTE</div>
-<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-005-E</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold">Sevilla Express</span>
+<span class="text-xs opacity-50">420 unid.</span>
+</div>
+<div class="h-4 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[35%] rounded-full"></div>
 </div>
 </div>
-<div class="flex items-center gap-8">
-<div class="hidden md:block">
-<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
-<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
-<div class="bg-tertiary h-full w-[51%]"></div>
+<!-- Bar Item -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold">Bilbao Performance</span>
+<span class="text-xs opacity-50">681 unid.</span>
+</div>
+<div class="h-4 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[50%] rounded-full"></div>
 </div>
 </div>
-<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
-<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
-<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
 </div>
+</div>
+<!-- Snapshot Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h5 class="text-sm font-bold">En Tránsito</h5>
+<p class="text-2xl font-space font-bold">452 Unidades</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div>
+<h5 class="text-sm font-bold">Última Actualización</h5>
+<p class="text-2xl font-space font-bold">Hace 4 min</p>
 </div>
 </div>
 </div>
 </section>
+<!-- Sidebar Info/Action Section -->
+<aside class="space-y-6">
+<!-- Critical Alerts Card -->
+<div class="bg-[#201f1f] border-l-4 border-error p-6 rounded-lg">
+<div class="flex items-center gap-2 mb-4 text-error">
+<span class="material-symbols-outlined text-xl" data-icon="report_problem">report_problem</span>
+<h4 class="text-xs uppercase font-bold tracking-widest">Alertas Urgentes</h4>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 p-3 bg-error/5 rounded-xl">
+<span class="material-symbols-outlined text-error text-lg" data-icon="inventory_2">inventory_2</span>
+<div>
+<p class="text-xs font-bold">Proteína Whey 2kg (Vainilla)</p>
+<p class="text-[10px] opacity-60 uppercase">Sede Madrid • Quedan 2 unid.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 p-3 bg-error/5 rounded-xl">
+<span class="material-symbols-outlined text-error text-lg" data-icon="inventory_2">inventory_2</span>
+<div>
+<p class="text-xs font-bold">Creatina Monohidrato 500g</p>
+<p class="text-[10px] opacity-60 uppercase">Sede Barcelona • Sin stock</p>
+</div>
+</li>
+<li class="flex items-start gap-3 p-3 bg-error/5 rounded-xl">
+<span class="material-symbols-outlined text-error text-lg" data-icon="inventory_2">inventory_2</span>
+<div>
+<p class="text-xs font-bold">Cinturón Levantamiento L</p>
+<p class="text-[10px] opacity-60 uppercase">Sede Valencia • Quedan 5 unid.</p>
+</div>
+</li>
+</ul>
+<button class="w-full mt-6 py-3 border border-error/20 hover:bg-error/10 text-error text-xs font-bold uppercase tracking-widest rounded-full transition-all">
+                        Gestionar Reposiciones
+                    </button>
+</div>
+<!-- Quick Export Widget -->
+<div class="bg-surface-container-high p-6 rounded-lg relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-lg font-space font-bold mb-2">Exportación Rápida</h4>
+<p class="text-on-surface-variant text-xs mb-6">Genera un catálogo visual de todas las sedes con un solo click.</p>
+<div class="space-y-2">
+<button class="w-full py-4 bg-surface rounded-xl flex items-center px-4 gap-3 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="grid_view">grid_view</span>
+<span class="text-xs font-bold text-left">Catálogo con Imágenes (PDF)</span>
+</button>
+<button class="w-full py-4 bg-surface rounded-xl flex items-center px-4 gap-3 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-tertiary" data-icon="list_alt">list_alt</span>
+<span class="text-xs font-bold text-left">Lista de Precios Actualizada</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Abstract Visual Element -->
+<div class="h-40 rounded-lg overflow-hidden relative">
+<img alt="Gym environment" class="w-full h-full object-cover grayscale opacity-30 hover:grayscale-0 hover:opacity-60 transition-all duration-700" data-alt="dramatic interior of a modern gym with heavy weights, dark atmosphere, and moody lighting focusing on metal textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_ch_BP6F7hR27KD4iD48e2ErhhaT2dEyZRBTVGq8BOWScI_MTMPMu_mFliXAdamzedLqafdAnB6dh_vJVh_hjgHKJc04iyKxzJYCHdpUmp7tqzAdMeu8ZTygSFwyGc052r79eySo_KzmfNqLxCi_9sUF40zwYIQ4nQeNhss7m6rl_GUlKucLJQbEGuMiBNFK7o8OjeA96ne-UvwjfdTLFW6w3vXJJ5aqWtX7Ivc46MeOfIpxciZJYTzvTDiBAfgYAyB5XLwRRT6um"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] uppercase tracking-widest opacity-60">Status del Sistema</p>
+<p class="text-xs font-bold text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            Sincronizado
+                        </p>
+</div>
+</div>
+</aside>
+</div>
 </main>
-<!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
-<a class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em]">Panel</span>
+<!-- BottomNavBar for Mobile -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#131313]/90 backdrop-blur-xl lg:hidden z-50 border-t border-[#5b403d]/20">
+<a class="flex flex-col items-center justify-center text-[#ffb3ac] bg-[#ffb3ac]/10 rounded-full p-3 transition-transform duration-300 scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-space text-[10px] font-medium uppercase tracking-tighter mt-1">Inicio</span>
 </a>
-<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] active:scale-90 transition-all duration-200" href="#">
-<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+<span class="font-space text-[10px] font-medium uppercase tracking-tighter mt-1">Stock</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-space text-[10px] font-medium uppercase tracking-tighter mt-1">Sedes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/40 p-3" href="#">
+<span class="material-symbols-outlined" data-icon="filter_center_focus">filter_center_focus</span>
+<spa
