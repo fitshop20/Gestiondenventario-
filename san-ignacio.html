@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GESTIÓN SEDE SAN IGNACIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#7cb0c0",
+              "on-primary-fixed": "#40000b",
+              "secondary-fixed-dim": "#ffb3b5",
+              "on-primary": "#680018",
+              "outline": "#a78a8a",
+              "error-container": "#93000a",
+              "surface-tint": "#ffb3b5",
+              "surface-bright": "#3a3939",
+              "surface-container-highest": "#353534",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed": "#3b070e",
+              "primary-fixed-dim": "#ffb3b5",
+              "on-tertiary": "#003640",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed": "#b6ebfb",
+              "background": "#131313",
+              "on-secondary": "#571c22",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#114d5b",
+              "on-error": "#690005",
+              "secondary-container": "#743237",
+              "on-surface-variant": "#e0bfbf",
+              "outline-variant": "#584141",
+              "on-primary-fixed-variant": "#8e0f28",
+              "primary-container": "#800020",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-container": "#004451",
+              "secondary": "#ffb3b5",
+              "on-primary-container": "#ff828a",
+              "on-surface": "#e5e2e1",
+              "primary": "#ffb3b5",
+              "on-secondary-fixed-variant": "#743237",
+              "surface": "#131313",
+              "inverse-primary": "#af2b3e",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-container": "#f69da0",
+              "tertiary-fixed-dim": "#9acfde",
+              "surface-container": "#201f1f",
+              "surface-variant": "#353534",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffdada",
+              "tertiary": "#9acfde",
+              "secondary-fixed": "#ffdada"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .scan-line {
+        height: 2px;
+        background: #9acfde;
+        box-shadow: 0 0 15px #9acfde;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+      }
+      .security-grid {
+        background-size: 24px 24px;
+        background-image: linear-gradient(to right, rgba(88, 65, 65, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(88, 65, 65, 0.05) 1px, transparent 1px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body security-grid min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313] flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ffb3b5]" data-icon="factory">factory</span>
+<h1 class="text-lg font-black text-[#e5e2e1] tracking-widest font-headline uppercase">GESTIÓN SEDE SAN IGNACIO</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#2a2a2a] transition-colors rounded-sm text-[#e5e2e1] active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="hidden md:flex items-center gap-6 font-headline font-bold tracking-tight ml-4">
+<a class="text-[#ffb3b5]" href="#">Inventario</a>
+<a class="text-[#e5e2e1] hover:text-[#ffb3b5] transition-colors" href="#">Analítica</a>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 w-72 border-r border-[#3a3939]/15 bg-[#131313]">
+<div class="p-8 mt-16 flex flex-col gap-8">
+<div class="flex items-start gap-4 flex-col">
+<div class="w-12 h-12 bg-surface-container-high rounded-sm flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="person">person</span>
+</div>
+<div>
+<h3 class="font-headline font-black italic text-[#800020] uppercase">OPERADOR_082</h3>
+<p class="text-[10px] font-label text-on-surface-variant tracking-widest">SECTOR 7G - NIVEL AUTH 4</p>
+<span class="inline-block mt-2 px-2 py-0.5 bg-tertiary-container/20 text-tertiary text-[9px] font-bold rounded-sm border border-tertiary/20">SESIÓN_ACTIVA</span>
+</div>
+</div>
+<nav class="flex flex-col gap-1 font-headline uppercase text-sm tracking-tighter">
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Panel
+                </a>
+<a class="bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 transition-all duration-300 ease-in-out flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Inventario
+                </a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span> Escanear
+                </a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Configuración
+                </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 lg:pl-80 px-4 max-w-7xl mx-auto">
+<!-- Node Metrics - Asymmetric Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="md:col-span-2 bg-surface-container-low p-6 flex flex-col justify-between border-l-4 border-primary shadow-[inset_0_0_20px_rgba(128,0,32,0.05)]">
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.2em] mb-2">Total de Activos de Nodo</p>
+<h2 class="font-headline text-5xl font-bold text-on-surface">1.428 <span class="text-xl text-primary-container font-medium uppercase tracking-normal">SKUs</span></h2>
+</div>
+<div class="mt-6 flex gap-4">
+<div class="bg-surface-container px-3 py-2 rounded-sm border border-outline-variant/10">
+<p class="text-[9px] text-on-tertiary-fixed-variant uppercase font-bold mb-1">Estado de Stock</p>
+<p class="text-tertiary font-headline font-bold">94.2%</p>
+</div>
+<div class="bg-surface-container px-3 py-2 rounded-sm border border-outline-variant/10">
+<p class="text-[9px] text-on-secondary-fixed-variant uppercase font-bold mb-1">Tasa de Rotación</p>
+<p class="text-secondary font-headline font-bold">0.85</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-high p-4 border-l-4 border-tertiary">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest">Valor Total del Nodo</p>
+<p class="font-headline text-2xl font-bold text-on-surface">$248.390</p>
+</div>
+<div class="bg-error-container/10 p-4 border-l-4 border-error">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-error font-label text-[10px] uppercase tracking-widest">Alertas Críticas</p>
+<p class="font-headline text-2xl font-bold text-error">12</p>
+</div>
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reporting Actions -->
+<div class="flex flex-wrap gap-3 mb-8">
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-sm font-label text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 border-t border-primary/10">
+<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+                REPORTE SEDE PDF
+            </button>
+<button class="bg-surface-container-high text-on-surface px-6 py-3 rounded-sm font-label text-xs font-bold uppercase tracking-widest flex items-center gap-2 border border-outline-variant/20 hover:bg-surface-bright transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
+                EXPORTAR CSV/EXCEL
+            </button>
+<div class="ml-auto bg-surface-container px-4 py-2 flex items-center gap-4 rounded-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs font-label uppercase tracking-widest w-48 text-on-surface" placeholder="FILTRAR POR SKU O LOTE..." type="text"/>
+</div>
+</div>
+<!-- Inventory List - No Dividers, Only Background Shifts -->
+<div class="bg-surface-container-lowest overflow-hidden border border-outline-variant/10">
+<div class="grid grid-cols-12 bg-surface-container-high p-4 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold border-b border-outline-variant/5">
+<div class="col-span-1">Imagen</div>
+<div class="col-span-2">SKU ID</div>
+<div class="col-span-4">Nombre del Producto</div>
+<div class="col-span-2">Stock</div>
+<div class="col-span-2 text-right">Precio (Unidad)</div>
+<div class="col-span-1"></div>
+</div>
+<!-- List Items -->
+<div class="space-y-1">
+<!-- Item 1 -->
+<div class="grid grid-cols-12 items-center p-4 bg-surface-container hover:bg-surface-bright transition-colors">
+<div class="col-span-1">
+<img class="w-10 h-10 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-300" data-alt="Close-up of industrial fitness equipment, heavy metal weight plates with textured black finish and red details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcKilUhIgPyKDky0dj3tgPvcVV0PDUrkoAsMYoLSJn7XI1_YF77vjEDYDnW9IXfmce-gYzaX5s3N-VEe_6yy_lCYLmW2f_FWQFY4NdQE8i6tTx8ycvJwNqJnyJ9eusstXcoqXoBNk-eb6K5nu4fcL1qOkLTpmd3T1hWO2SPb5yXnEemY0bP_qydwgDJJQLWWiuTP2ckdMHkGmmQz9jYP_XJ5kcDgo52wEPdroxydrFnEn613-l1eEtNKoHWeiCI43WAbsICEcayh_j"/>
+</div>
+<div class="col-span-2 font-label text-xs font-medium text-on-surface-variant tracking-tighter">IGN-XP-8821</div>
+<div class="col-span-4 font-headline text-sm font-bold text-on-surface">PROTEÍNA ISO-WHEY 2KG BLACK</div>
+<div class="col-span-2">
+<div class="flex items-center gap-2">
+<span class="text-sm font-headline font-bold">142</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<div class="col-span-2 text-right font-headline text-sm font-bold">$74.50</div>
+<div class="col-span-1 flex justify-end">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="grid grid-cols-12 items-center p-4 bg-surface-container-low hover:bg-surface-bright transition-colors border-l-4 border-error">
+<div class="col-span-1">
+<img class="w-10 h-10 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-300" data-alt="Technical macro shot of a nutrition supplement shaker bottle with mechanical markings on a dark workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJvLI_VQGwcyX-UUnvBjilwzktgwQmj9G3wko9WBzkBAdVs9RMCwc7ieSXg9pqNlkE5OTAxNEBNfEJKngQuUV2YPZ7a0Kk7fVBjSYPQZsGTAXnDw6mggCR0k-W_tafPuxRxEr7CLXelRyR15lnsR9dpMYOUqY6aXJQGDOfojqFH-gAbhrGtdkgKQ9tTUOWjok5gd8pxuTS8YWn3G_-CndGjDwoSZaH8GBliwydJ_1CPrtHczcnn3kOqtb9eXjbOaTMkCq4H-3ufwTB"/>
+</div>
+<div class="col-span-2 font-label text-xs font-medium text-on-surface-variant tracking-tighter">IGN-BC-1102</div>
+<div class="col-span-4 font-headline text-sm font-bold text-on-surface">BCAA RECUPERACIÓN INTRA-ENTRENO</div>
+<div class="col-span-2">
+<div class="flex items-center gap-2">
+<span class="text-sm font-headline font-bold text-error">08</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+</div>
+<div class="col-span-2 text-right font-headline text-sm font-bold">$32.99</div>
+<div class="col-span-1 flex justify-end">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="grid grid-cols-12 items-center p-4 bg-surface-container hover:bg-surface-bright transition-colors">
+<div class="col-span-1">
+<img class="w-10 h-10 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-300" data-alt="High-contrast photo of professional boxing gloves hanging against a dark textured wall in a gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtoPNRaEk61zJwLToGbO_d4lyzfFfaACHc3Vrn7Oa-vUqp5Bwkl0EOX9cQBjZy7ghycAh6eKZObe0xmcE1uB-LCXpM39TACt95vpy_KcJ4v3jjevNqnAKnsvFyP9DGWJFByJuC-nlbRc5mIKA-R0AM7NqRgTB28DV7g0bfzoJSkqPy0Y6Kbnha5lkyTCdzyVB-rIZ_rft9AQlEi5BOqIFGNugDwN6CoMsLVcVE2TyO_u4V6vrNtnXxOxGYd7qDCzHTN_X5SmbfLazS"/>
+</div>
+<div class="col-span-2 font-label text-xs font-medium text-on-surface-variant tracking-tighter">IGN-GL-5520</div>
+<div class="col-span-4 font-headline text-sm font-bold text-on-surface">GUANTES ELITE TRAINING 12OZ</div>
+<div class="col-span-2">
+<div class="flex items-center gap-2">
+<span class="text-sm font-headline font-bold">54</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<div class="col-span-2 text-right font-headline text-sm font-bold">$120.00</div>
+<div class="col-span-1 flex justify-end">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="grid grid-cols-12 items-center p-4 bg-surface-container-low hover:bg-surface-bright transition-colors">
+<div class="col-span-1">
+<img class="w-10 h-10 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-300" data-alt="Minimalist yoga mat rolled up on a dark industrial floor with dramatic top-down lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVRN6XH-Y9J3opm1y-IPhGJ2BVg8HnPRWqbUfwUT8MqJSteQ_Bjzot9VVY79h15ReKED4iAoiW6pTvfWr0iIfrdguthczrxx6FAMWiuP9BE1ZXbFTP6SaBfswgzCabzMm2wa2En2BkFEs8WWaM3ddTQMspar3qQaAfGM-2L2YqXtIocGbsCkX0JmbXKWNmDC1jYuyE-uadiASkmpG89Ma4Ywx--SiHK51WxMlhs1aftTt_ZqGgCjPewzWD-zA5z6Be_2ApN8JXOdOf"/>
+</div>
+<div class="col-span-2 font-label text-xs font-medium text-on-surface-variant tracking-tighter">IGN-MT-9004</div>
+<div class="col-span-4 font-headline text-sm font-bold text-on-surface">MAT PRO-GRIP INDUSTRIAL</div>
+<div class="col-span-2">
+<div class="flex items-center gap-2">
+<span class="text-sm font-headline font-bold">12</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="col-span-2 text-right font-headline text-sm font-bold">$55.00</div>
+<div class="col-span-1 flex justify-end">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</div>
+</div>
+</div>
+<!-- System Telemetry Footer -->
+<div class="mt-8 flex justify-between items-center text-[9px] font-label uppercase tracking-[0.3em] text-on-surface-variant/40">
+<p>ÚLTIMA_SINCRONIZACIÓN: 2023-10-27T14:42:01Z</p>
+<p>ENCRIPTACIÓN: AES-256 ACTIVA</p>
+<p>AUTH_NODO: SAN_IGNACIO_CENTRAL</p>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe bg-[#0e0e0e] z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Panel</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Inventario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5]" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Escanear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5]" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em] mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Scan Overlay (Contextual Triggered) - Hidden by default but structured -->
+<div class="fixed inset-0 bg-surface-dim/40 backdrop-blur-md z-[100] hidden flex items-center justify-center" id="scan-overlay">
+<div class="relative w-72 h-72 border-2 border-tertiary/30 rounded-lg overflow-hidden">
+<div class="scan-line animate-pulse"></div>
+<div class="absolute inset-0 flex items-center justify-center flex-col p-8 text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4" data-icon="center_focus_weak">center_focus_weak</span>
+<p class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface">Iniciando Escaneo Táctico...</p>
+</div>
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-tertiary"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-tertiary"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-tertiary"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-tertiary"></div>
+</div>
+</div>
+</body></html>
