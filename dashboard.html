@@ -1,314 +1,371 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es-419"><head>
+<html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="noindex, nofollow" name="robots"/>
-<title>FitShop - Dashboard Global (Privado)</title>
+<title>PANEL GLOBAL - FitShop Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-tint": "#ffb3b5",
-                        "tertiary-container": "#004451",
-                        "surface-bright": "#37393b",
-                        "on-tertiary-container": "#7cb0c0",
-                        "on-tertiary": "#003640",
-                        "surface-container-high": "#282a2c",
-                        "inverse-surface": "#e2e2e5",
-                        "primary-container": "#800020",
-                        "on-surface": "#e2e2e5",
-                        "on-primary-fixed-variant": "#8e0f28",
-                        "on-secondary-fixed": "#3b070e",
-                        "tertiary-fixed": "#b6ebfb",
-                        "surface-container": "#1e2022",
-                        "on-secondary-fixed-variant": "#743237",
-                        "tertiary-fixed-dim": "#9acfde",
-                        "surface-dim": "#121416",
-                        "on-error-container": "#ffdad6",
-                        "primary-fixed": "#ffdada",
-                        "on-background": "#e2e2e5",
-                        "surface-variant": "#333537",
-                        "on-tertiary-fixed-variant": "#114d5b",
-                        "on-tertiary-fixed": "#001f26",
-                        "primary": "#ffb3b5",
-                        "background": "#121416",
-                        "error-container": "#93000a",
-                        "on-secondary-container": "#f69da0",
-                        "error": "#ffb4ab",
-                        "secondary-fixed": "#ffdada",
-                        "surface-container-low": "#1a1c1e",
-                        "on-error": "#690005",
-                        "secondary-container": "#743237",
-                        "on-secondary": "#571c22",
-                        "tertiary": "#9acfde",
-                        "surface": "#121416",
-                        "outline": "#a78a8a",
-                        "primary-fixed-dim": "#ffb3b5",
-                        "on-primary-container": "#ff828a",
-                        "inverse-primary": "#af2b3e",
-                        "secondary": "#ffb3b5",
-                        "on-surface-variant": "#e0bfbf",
-                        "on-primary": "#680018",
-                        "surface-container-highest": "#333537",
-                        "outline-variant": "#584141",
-                        "secondary-fixed-dim": "#ffb3b5",
-                        "surface-container-lowest": "#0c0e10",
-                        "on-primary-fixed": "#40000b",
-                        "inverse-on-surface": "#2f3133"
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk"],
-                        "body": ["Manrope"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#7cb0c0",
+              "on-primary-fixed": "#40000b",
+              "secondary-fixed-dim": "#ffb3b5",
+              "on-primary": "#680018",
+              "outline": "#a78a8a",
+              "error-container": "#93000a",
+              "surface-tint": "#ffb3b5",
+              "surface-bright": "#3a3939",
+              "surface-container-highest": "#353534",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed": "#3b070e",
+              "primary-fixed-dim": "#ffb3b5",
+              "on-tertiary": "#003640",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed": "#b6ebfb",
+              "background": "#131313",
+              "on-secondary": "#571c22",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#114d5b",
+              "on-error": "#690005",
+              "secondary-container": "#743237",
+              "on-surface-variant": "#e0bfbf",
+              "outline-variant": "#584141",
+              "on-primary-fixed-variant": "#8e0f28",
+              "primary-container": "#800020",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-container": "#004451",
+              "secondary": "#ffb3b5",
+              "on-primary-container": "#ff828a",
+              "on-surface": "#e5e2e1",
+              "primary": "#ffb3b5",
+              "on-secondary-fixed-variant": "#743237",
+              "surface": "#131313",
+              "inverse-primary": "#af2b3e",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-container": "#f69da0",
+              "tertiary-fixed-dim": "#9acfde",
+              "surface-container": "#201f1f",
+              "surface-variant": "#353534",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffdada",
+              "tertiary": "#9acfde",
+              "secondary-fixed": "#ffdada"
             },
-        }
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Manrope', sans-serif;
-            background-color: #121416;
-            color: #e2e2e5;
-        }
-        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
-        .glass-panel {
-            background: rgba(30, 32, 34, 0.8);
-            backdrop-filter: blur(20px);
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .grid-bg {
+        background-image: radial-gradient(circle, rgba(88, 65, 65, 0.1) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
     </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
-<body class="overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="bg-[#121416] dark:bg-[#121416] docked full-width top-0 sticky z-50 flex justify-between items-center px-6 py-4 w-full backdrop-blur-xl bg-opacity-80">
-<div class="flex items-center gap-8">
-<span class="text-xl font-bold text-[#800020] dark:text-[#ffb3b5] font-headline">FitShop</span>
-<nav class="hidden md:flex gap-6 items-center">
-<a class="font-space-grotesk tracking-tight text-sm uppercase text-[#ffb3b5] border-b-2 border-[#800020] pb-1" href="#">Dashboard</a>
-<a class="font-space-grotesk tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-colors duration-200" href="#">Tiendas</a>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container grid-bg">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ffb3b5] text-2xl" data-icon="factory">factory</span>
+<span class="text-lg font-black text-[#e5e2e1] tracking-widest font-['Space_Grotesk']">PANEL GLOBAL</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-4 font-['Space_Grotesk'] font-bold tracking-tight">
+<a class="text-[#ffb3b5] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Panel</a>
+<a class="text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Inventario</a>
+<a class="text-[#e5e2e1] hover:bg-[#2a2a2a] transition-colors px-3 py-1 rounded" href="#">Nodos</a>
+</div>
+<button class="material-symbols-outlined text-[#ffb3b5] hover:bg-[#2a2a2a] transition-colors p-2 rounded-sm active:scale-95 duration-100" data-icon="notifications">notifications</button>
+</div>
 </nav>
+<!-- Side Navigation Drawer (Desktop) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 bg-[#131313] dark:bg-[#131313] h-full w-72 border-r border-[#3a3939]/15">
+<div class="pt-24 px-6 pb-8 flex flex-col gap-1">
+<div class="flex items-center gap-4 mb-8 bg-[#201f1f] p-4 rounded-sm">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center rounded-sm overflow-hidden">
+<img alt="Operador" class="w-full h-full object-cover" data-alt="Close up of a gritty cybernetic operator avatar with high contrast lighting and metallic industrial elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkgheQ1TIt5-KE8ExlVgmNA5vqCpmJxuLj52lQDR5k83an60OWtqvoTKX8ZspqMA0FADTaGs1UY9hU7p618ZI85CxM0Hp7TDWd7QRrHxX80ZIjttHVR7NeHmgdKVqO10MQHI0hw3XP-jk5bT9jd6GZcE0Qj_QVJlZFMv-3mIJjMHyTB2xg5aRbkHJ02-35NR5aebXmG30Qs3ElBcZ0ETcqNmFgtbj1EZ3VBk-9_xWBoeVZTfx_V__fIzXX_CmPZdDF42Zmar6P4Qli"/>
 </div>
-<div class="flex items-center gap-4">
-<div class="hidden sm:block relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
-<input class="bg-surface-container-low border-none text-sm rounded-lg pl-10 pr-4 py-2 focus:ring-1 focus:ring-primary-container w-48 lg:w-64" placeholder="Buscar..." type="text"/>
+<div>
+<div class="font-['Space_Grotesk'] font-black italic text-[#800020] text-sm tracking-tighter">OPERADOR_082</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-widest">Sector 7G - Nivel Aut. 4</div>
 </div>
-<button class="text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-white border border-outline-variant/20">
-            ADM
-        </div>
 </div>
-</header>
-<div class="flex min-h-screen">
-<!-- SideNavBar -->
-<aside class="bg-[#1a1c1e] dark:bg-[#1a1c1e] h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col border-r border-[#333537]/15 shadow-2xl z-40 pt-20">
-<div class="px-6 mb-8">
-<h2 class="font-space-grotesk font-bold text-[#800020] text-lg uppercase tracking-wider">Módulos</h2>
-</div>
-<nav class="flex flex-col gap-2 p-4">
-<a class="flex items-center gap-3 px-4 py-3 bg-[#800020] text-white rounded-md mx-2 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
-                Vista Global
-            </a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined">location_on</span>
-                San Luis
-            </a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined">location_on</span>
-                San Ignacio
-            </a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined">location_on</span>
-                Milenium
-            </a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined">location_on</span>
-                Galerías Ávila
-            </a>
-<div class="mt-auto pb-8">
-<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium" href="#">
-<span class="material-symbols-outlined">settings</span>
+<nav class="flex flex-col font-['Space_Grotesk'] uppercase text-sm tracking-tighter">
+<a class="bg-[#201f1f] border-l-4 border-[#800020] text-[#ffb3b5] font-bold px-6 py-4 flex items-center gap-3 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Panel de Control
+                </a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    Inventario
+                </a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+                    Escanear
+                </a>
+<a class="text-[#e5e2e1]/70 px-6 py-4 flex items-center gap-3 hover:bg-[#2a2a2a] hover:text-[#e5e2e1] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
                     Configuración
                 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-red-400 hover:bg-[#1e2022] mx-2 rounded-md transition-transform hover:translate-x-1 font-manrope text-sm font-medium mt-2" href="index.html">
-<span class="material-symbols-outlined">logout</span>
-                    Cerrar Sesión
-                </a>
-</div>
 </nav>
+</div>
+<div class="mt-auto p-6">
+<div class="text-[10px] text-on-surface-variant font-mono uppercase opacity-50">Sesión Activa: 0xFD342...</div>
+</div>
 </aside>
-<!-- Main Content Canvas -->
-<main class="flex-1 lg:ml-64 p-6 md:p-12 bg-[#121416]">
-<!-- Header Section -->
-<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<!-- Main Content -->
+<main class="lg:ml-72 pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Dashboard Header & Reporting Actions -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
 <div>
-<span class="text-primary font-headline text-sm uppercase tracking-[0.3em] font-semibold">Consolidado Corporativo</span>
-<h1 class="text-4xl md:text-5xl font-headline font-bold text-white mt-2 tracking-tighter">Resumen Global de Inventario</h1>
+<h1 class="font-headline text-5xl font-black text-on-surface tracking-tighter uppercase mb-2">Panel Global <span class="text-primary">FitShop</span></h1>
+<p class="font-body text-on-surface-variant tracking-wide max-w-xl">Supervisión centralizada de existencias y telemetría de red. Datos en tiempo real de nodos logísticos.</p>
 </div>
-<div class="flex items-center gap-3">
-<div class="flex items-center gap-3 px-4 py-2 bg-surface-container rounded-lg border border-outline-variant/10">
-<span class="material-symbols-outlined text-primary">groups</span>
-<span class="text-sm font-medium text-slate-300">Equipo de Analítica</span>
-</div>
-<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded text-sm font-bold font-headline uppercase tracking-wide hover:bg-on-primary-fixed-variant transition-colors">
-                    Descargar Reporte
+<div class="flex flex-wrap gap-3">
+<button class="bg-primary-container text-on-primary-container px-6 py-3 font-label text-xs font-bold uppercase tracking-widest rounded-sm border-t border-primary-fixed/10 hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+                    GENERAR REPORTE PDF (CATÁLOGO)
+                </button>
+<button class="bg-surface-container-high text-on-surface border border-outline-variant/20 px-6 py-3 font-label text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-surface-bright active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="table_view">table_view</span>
+                    EXPORTAR EXCEL
                 </button>
 </div>
+</header>
+<!-- High-Level Overview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="bg-surface-container p-6 rounded-sm border-l-4 border-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 opacity-5">
+<span class="material-symbols-outlined text-8xl" data-icon="inventory">inventory</span>
 </div>
-<!-- KPIs Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-<!-- KPI 1 -->
-<div class="bg-primary-container p-8 rounded-lg relative overflow-hidden group shadow-2xl">
-<div class="relative z-10">
-<p class="font-headline text-on-primary-container text-xs uppercase tracking-widest font-bold opacity-80">Total Referencias</p>
-<h3 class="font-headline text-5xl font-bold text-primary mt-4 tracking-tighter">4,829</h3>
-<p class="text-on-primary-container text-sm mt-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">trending_up</span>
-                        +12% vs mes anterior
-                    </p>
+<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Unidades Totales en Stock</div>
+<div class="font-headline text-4xl font-bold text-on-surface">148,290</div>
+<div class="mt-2 text-tertiary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span> +12.4% DESDE ÚLTIMO CIERRE
+                </div>
 </div>
-<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-white opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-500">inventory_2</span>
+<div class="bg-surface-container p-6 rounded-sm border-l-4 border-tertiary relative overflow-hidden">
+<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Nodos Activos</div>
+<div class="font-headline text-4xl font-bold text-on-surface">05<span class="text-tertiary text-2xl font-light">/05</span></div>
+<div class="mt-2 text-tertiary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span> TODOS LOS SISTEMAS OPERATIVOS
+                </div>
 </div>
-<!-- KPI 2 -->
-<div class="bg-surface-container-low p-8 rounded-lg border-b-2 border-primary-container shadow-xl">
-<p class="font-headline text-slate-400 text-xs uppercase tracking-widest font-bold">Unidades en Stock</p>
-<h3 class="font-headline text-5xl font-bold text-white mt-4 tracking-tighter">32,150</h3>
-<div class="w-full bg-surface-container-highest h-1.5 mt-8 rounded-full overflow-hidden">
-<div class="bg-primary-container h-full w-3/4 rounded-full"></div>
-</div>
-<p class="text-slate-500 text-xs mt-3 italic">Capacidad de almacén: 75%</p>
-</div>
-<!-- KPI 3 -->
-<div class="bg-surface-container p-8 rounded-lg shadow-xl border-l-4 border-primary-container">
-<p class="font-headline text-slate-400 text-xs uppercase tracking-widest font-bold">Valorización Total</p>
-<div class="flex items-baseline gap-2 mt-4">
-<span class="text-primary font-headline text-2xl font-light">$</span>
-<h3 class="font-headline text-5xl font-bold text-white tracking-tighter">1.2M</h3>
-</div>
-<p class="text-primary text-sm mt-4 font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">payments</span>
-                    USD Consolidado
-                </p>
+<div class="bg-surface-container p-6 rounded-sm border-l-4 border-primary-container relative overflow-hidden">
+<div class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Valor Total del Inventario</div>
+<div class="font-headline text-4xl font-bold text-on-surface">$2.4M</div>
+<div class="mt-2 text-on-surface-variant text-xs font-mono uppercase">VALUACIÓN_BETA_V4</div>
 </div>
 </div>
-<!-- Distribution & Operational Status -->
-<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12">
-<!-- Stock Distribution Chart Visual -->
-<div class="lg:col-span-3 bg-surface-container-low p-8 rounded-lg shadow-lg">
+<!-- Main Data Visualization -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+<!-- Asymmetric Bento-style Chart Container -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-sm relative border border-outline-variant/10">
 <div class="flex justify-between items-start mb-8">
-<h4 class="font-headline text-xl font-bold text-white">Distribución por Sedes</h4>
+<div>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight">Tendencia de Stock Agregado</h3>
+<p class="text-xs text-on-surface-variant font-label uppercase">Sumatoria de existencias por ciclo de 24h</p>
+</div>
 <div class="flex gap-2">
-<span class="w-3 h-3 rounded-full bg-primary-container"></span>
-<span class="w-3 h-3 rounded-full bg-primary"></span>
-<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="bg-primary/20 text-primary px-2 py-1 text-[10px] font-bold uppercase rounded-sm">TELEMETRÍA EN VIVO</span>
 </div>
 </div>
-<!-- Mock Chart -->
-<div class="flex items-end justify-between gap-4 h-64 mt-4">
-<div class="flex flex-col items-center gap-4 w-full">
-<div class="w-full bg-primary-container rounded-t-lg transition-all hover:opacity-80" style="height: 85%"></div>
-<span class="text-[10px] uppercase font-bold text-slate-500 font-headline">San Luis</span>
+<!-- Mock Industrial Chart -->
+<div class="h-64 w-full flex items-end gap-1 overflow-hidden relative">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
 </div>
-<div class="flex flex-col items-center gap-4 w-full">
-<div class="w-full bg-on-primary-fixed-variant rounded-t-lg transition-all hover:opacity-80" style="height: 60%"></div>
-<span class="text-[10px] uppercase font-bold text-slate-500 font-headline">San Ignacio</span>
+<!-- Bars -->
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[40%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[55%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[45%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[70%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[65%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[85%]"></div>
+<div class="flex-1 bg-primary-container hover:bg-primary transition-colors h-[92%] relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary">MÁX</div>
 </div>
-<div class="flex flex-col items-center gap-4 w-full">
-<div class="w-full bg-primary rounded-t-lg transition-all hover:opacity-80" style="height: 45%"></div>
-<span class="text-[10px] uppercase font-bold text-slate-500 font-headline">Milenium</span>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[78%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[60%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[72%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[80%]"></div>
+<div class="flex-1 bg-surface-container-high hover:bg-primary transition-colors h-[88%]"></div>
 </div>
-<div class="flex flex-col items-center gap-4 w-full">
-<div class="w-full bg-surface-container-highest rounded-t-lg transition-all hover:opacity-80" style="height: 70%"></div>
-<span class="text-[10px] uppercase font-bold text-slate-500 font-headline">Galerías Ávila</span>
+<div class="flex justify-between mt-4 text-[10px] font-mono text-on-surface-variant uppercase tracking-widest">
+<span>00:00 HRS</span>
+<span>Sincronización Global: 14:00 HRS (Activa)</span>
+<span>23:59 HRS</span>
 </div>
 </div>
+<!-- Side Metric / Tactical Focus -->
+<div class="bg-primary-container p-8 flex flex-col justify-between rounded-sm">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="security">security</span>
+<h3 class="font-headline text-2xl font-bold leading-tight mb-2">INTEGRIDAD DE DATOS: 99.8%</h3>
+<p class="text-sm text-on-primary-container/80">Validación criptográfica exitosa en todos los nodos periféricos.</p>
 </div>
-<!-- Sedes Conectadas -->
-<div class="lg:col-span-2 bg-surface-container p-8 rounded-lg shadow-lg">
-<h4 class="font-headline text-xl font-bold text-white mb-8">Estado de Conectividad</h4>
-<div class="space-y-6">
-<div class="flex items-center justify-between p-4 bg-surface-container-low rounded group hover:bg-surface-bright transition-colors">
+<div class="pt-8">
+<div class="h-1 w-full bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[99.8%]"></div>
+</div>
+<button class="mt-6 w-full py-4 border border-on-primary-container/30 text-xs font-bold uppercase tracking-widest hover:bg-on-primary/10 transition-colors">Ver Logs de Seguridad</button>
+</div>
+</div>
+</section>
+<!-- Node Status List -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="hub">hub</span>
+<h2 class="font-headline text-xl font-bold uppercase tracking-tighter">Estado de Nodos Operativos</h2>
+</div>
+<div class="bg-surface-container rounded-sm overflow-hidden">
+<!-- Node Row 1 -->
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
 <div class="flex items-center gap-4">
-<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-<span class="font-medium text-sm">Sede San Luis</span>
+<div class="w-2 h-10 bg-tertiary"></div>
+<div>
+<div class="font-headline text-sm font-bold uppercase">NODO_ALFA_CENTRAL</div>
+<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-001-A</div>
 </div>
-<span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-1 rounded">Online</span>
 </div>
-<div class="flex items-center justify-between p-4 bg-surface-container-low rounded group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-8">
+<div class="hidden md:block">
+<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[45%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
+</div>
+</div>
+</div>
+<!-- Node Row 2 -->
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
 <div class="flex items-center gap-4">
-<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-<span class="font-medium text-sm">Sede San Ignacio</span>
+<div class="w-2 h-10 bg-primary"></div>
+<div>
+<div class="font-headline text-sm font-bold uppercase">NODO_BETA_NORTE</div>
+<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-002-B</div>
 </div>
-<span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-1 rounded">Online</span>
 </div>
-<div class="flex items-center justify-between p-4 bg-surface-container-low rounded group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-8">
+<div class="hidden md:block">
+<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-sm border border-primary/20">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-nowrap">Sincronizando</span>
+</div>
+</div>
+</div>
+<!-- Node Row 3 -->
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
 <div class="flex items-center gap-4">
-<div class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
-<span class="font-medium text-sm">Sede Milenium</span>
+<div class="w-2 h-10 bg-tertiary"></div>
+<div>
+<div class="font-headline text-sm font-bold uppercase">NODO_GAMMA_ESTE</div>
+<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-003-G</div>
 </div>
-<span class="text-[10px] font-bold text-amber-500 uppercase tracking-widest bg-amber-500/10 px-2 py-1 rounded">Sincronizando</span>
 </div>
-<div class="flex items-center justify-between p-4 bg-surface-container-low rounded group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-8">
+<div class="hidden md:block">
+<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[12%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
+</div>
+</div>
+</div>
+<!-- Node Row 4 -->
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-bright transition-colors">
 <div class="flex items-center gap-4">
-<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-<span class="font-medium text-sm">Sede Galerías Ávila</span>
-</div>
-<span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-1 rounded">Online</span>
-</div>
-</div>
+<div class="w-2 h-10 bg-tertiary"></div>
+<div>
+<div class="font-headline text-sm font-bold uppercase">NODO_DELTA_SUR</div>
+<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-004-D</div>
 </div>
 </div>
-<!-- Quick Access Section -->
-<div class="bg-surface-container-highest/30 p-8 rounded-lg backdrop-blur-sm border border-outline-variant/5">
-<h4 class="font-headline text-lg font-bold text-white mb-6">Acciones Rápidas de Inventario</h4>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low rounded hover:bg-primary-container group transition-all">
-<span class="material-symbols-outlined text-3xl mb-3 text-primary group-hover:text-white">add_box</span>
-<span class="text-xs uppercase font-bold font-headline tracking-tighter">Nueva Referencia</span>
-</button>
-<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low rounded hover:bg-primary-container group transition-all">
-<span class="material-symbols-outlined text-3xl mb-3 text-primary group-hover:text-white">move_up</span>
-<span class="text-xs uppercase font-bold font-headline tracking-tighter">Traslado Sede</span>
-</button>
-<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low rounded hover:bg-primary-container group transition-all">
-<span class="material-symbols-outlined text-3xl mb-3 text-primary group-hover:text-white">list_alt</span>
-<span class="text-xs uppercase font-bold font-headline tracking-tighter">Auditoría Stock</span>
-</button>
-<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low rounded hover:bg-primary-container group transition-all">
-<span class="material-symbols-outlined text-3xl mb-3 text-primary group-hover:text-white">analytics</span>
-<span class="text-xs uppercase font-bold font-headline tracking-tighter">Reporte Mensual</span>
-</button>
+<div class="flex items-center gap-8">
+<div class="hidden md:block">
+<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[29%]"></div>
 </div>
 </div>
-<div class="h-24 lg:hidden"></div> <!-- Spacer for mobile bottom nav -->
+<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
+</div>
+</div>
+</div>
+<!-- Node Row 5 -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-2 h-10 bg-tertiary"></div>
+<div>
+<div class="font-headline text-sm font-bold uppercase">NODO_EPSILON_OESTE</div>
+<div class="text-[10px] font-mono text-on-surface-variant">ID: PS-005-E</div>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:block">
+<div class="text-[10px] uppercase text-on-surface-variant mb-1">Carga de Trabajo</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[51%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-sm border border-tertiary/20">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Operativo</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
-</div>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#121416] dark:bg-[#121416] lg:hidden z-50 border-t border-[#333537]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
-<a class="flex flex-col items-center justify-center text-slate-500 p-2 transition-all duration-300" href="#">
-<span class="material-symbols-outlined">qr_code_scanner</span>
-<span class="font-space-grotesk text-[10px] uppercase font-bold">Escanear</span>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] flex justify-around items-center px-4 pb-safe z-50 border-t border-[#3a3939]/15 shadow-[0_-8px_32px_rgba(142,15,40,0.08)]">
+<a class="flex flex-col items-center justify-center bg-[#800020] text-[#ffb3b5] rounded-sm p-2 scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05em]">Panel</span>
 </a>
-<a class="flex flex-col items-center justify-center bg-[#800020] text-white rounded-xl p-2 scale-110 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
-<span class="font-space-grotesk text-[10px] uppercase font-bold">Inventario</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 p-2 transition-all duration-300" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="font-space-grotesk text-[10px] uppercase font-bold">Perfil</span>
-</a>
-</nav>
-</body></html>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 p-2 hover:text-[#ffb3b5] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-[0.05
